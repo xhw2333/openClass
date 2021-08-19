@@ -1,0 +1,32 @@
+// 重置iview样式
+#ResourceDownload .ivu-tabs-bar {
+  border: none;
+  margin-bottom: 10px;
+}
+
+#ResourceDownload .ivu-tabs-nav{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+
+#ResourceDownload .ivu-tabs-nav .ivu-tabs-tab {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #9E9E9E;
+
+  &:hover {
+    color: #585858;
+  }
+}
+
+#ResourceDownload .ivu-tabs-nav .ivu-tabs-tab-active {
+  color: #585858;
+}
+#ResourceDownload .ivu-tabs-ink-bar{
+  background: #3B888B;
+}
