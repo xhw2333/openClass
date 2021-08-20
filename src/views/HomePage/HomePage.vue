@@ -199,7 +199,7 @@ export default {
   }
 
   .first_wrap {
-    padding: 50px 200px;
+    // padding: 50px 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,19 +210,21 @@ export default {
       display: flex;
       justify-content: space-between;
       height: 100%;
-      max-width: 1300px;
-      min-width: 600px;
+      width: 50%;
+      padding: 50px 0;
+      // max-width: 1300px;
+      // min-width: 600px;
     }
 
     .left_wrap {
-      flex: 1;
+      // flex: 1;
       display: flex;
       flex-direction: column;
-      padding: 50px 0;
+      justify-content: center;
 
       .top_wrap {
         margin-left: 20px;
-        flex: 2.5;
+        // flex: 2.5;
         display: flex;
         flex-direction: column;
         // align-items: center;
@@ -239,7 +241,7 @@ export default {
 
       .bottom_wrap {
         margin-top: 10px;
-        flex: 1;
+        // flex: 1;
         display: flex;
         justify-content: space-between;
 
@@ -273,7 +275,7 @@ export default {
     }
 
     .home_pic {
-      flex: 1.5;
+      // flex: 1.5;
       margin-left: 10px;
     }
   }
@@ -309,7 +311,7 @@ export default {
     }
   }
 
-/*   .union_school {
+  /*   .union_school {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,6 +487,22 @@ export default {
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #HomePage {
+    .first_wrap {
+      > div {
+        width: 100%;
+      }
+      .home_pic {
+        // width: 200px;
+        // height: 200px;
+        width: 50%;
+        height: 100%;
       }
     }
   }

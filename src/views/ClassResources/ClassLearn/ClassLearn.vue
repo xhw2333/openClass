@@ -206,7 +206,7 @@ export default {
       //章节的所有数据
       classesList: videoData,
       //视屏播放地址
-      videoSrc: "",
+      videoSrc: "http://qgailab.com/course/resources/video/1.5_1.mp4",
       //学习任务
       work: "理解编程语言的特点;初步掌握在计算机上运行程序的方法；理解算法的概念和特性；能够用N-S流程图来表示算法。",
       //主标题

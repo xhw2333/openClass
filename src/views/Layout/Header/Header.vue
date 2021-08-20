@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     handleChange(numb) {
-      this.$store.commit("changePage",numb);
+      this.$store.commit("changePage", numb);
     },
 
     //用户退出
@@ -90,6 +90,7 @@ export default {
   background: #009d9f;
   z-index: 999;
   font-size: 16px;
+  box-sizing: border-box;
 
   .container {
     display: flex;
@@ -99,6 +100,7 @@ export default {
     width: calc(100% - 100px);
     margin: 0 auto;
     color: #25787b;
+    box-sizing: border-box;
 
     .first-wrap {
       display: flex;
@@ -173,6 +175,31 @@ export default {
       span {
         color: #fff;
         margin: 0 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Header {
+    .container {
+      width: 95%;
+
+      .first-wrap {
+        h1 {
+          width: 50px;
+          background-size: cover;
+        }
+
+        ul {
+          margin-left: 30px;
+
+          li {
+            .nav_item {
+              padding: 0 25px;
+            }
+          }
+        }
       }
     }
   }
