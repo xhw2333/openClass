@@ -1,32 +1,31 @@
 <template>
   <div id="HomePage">
     <div class="first_wrap">
-      <div>
+      <div class="fu_wrap">
         <div class="left_wrap">
           <div class="top_wrap">
-            <h2>THE FOUNDATION OF<br />PROGRAMMING DESIGN</h2>
-
-            <h2 class="main_title">广东省在线开放课程<br />程序设计基础</h2>
+            <span class="small_title">在/线/开/放/课/程</span>
+            <h2 class="main_title">程序设计基础</h2>
+            <h2>Basics of Programming</h2>
           </div>
           <div class="bottom_wrap">
             <div class="select_item" @click="startStudy">
-              开始学习 <img src="../../assets/images/mingshifudao.png" alt="" />
+              开始学习
+              <!-- <img src="../../assets/images/mingshifudao.png" alt="" /> -->
             </div>
             <a
               class="select_item"
               href="http://qgailab.com/anywork/html/login.html"
               target="blank"
-              >在线测试<img
+              >在线测试
+              <!-- <img
                 src="../../assets/images/xueqianzhenduan.png"
                 alt=""
-            /></a>
+            /> -->
+            </a>
           </div>
         </div>
-        <img
-          class="home_pic"
-          src="../../assets/images/support-team.png"
-          alt=""
-        />
+        <img class="home_pic" src="../../assets/images/bg.png" alt="" />
       </div>
     </div>
     <div class="class_info">
@@ -59,7 +58,7 @@
         </div>
       </div>
     </div> -->
-    <div class="teacher_teams">
+    <!-- <div class="teacher_teams">
       <h3>高校联盟</h3>
       <div class="teacher_list">
         <img src="../../assets/images/shizililiang.png" alt="" class="pic3" />
@@ -87,7 +86,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -199,84 +198,73 @@ export default {
   }
 
   .first_wrap {
-    // padding: 50px 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: #fff;
-    height: 400px;
 
-    > div {
+    .fu_wrap {
       display: flex;
-      justify-content: space-between;
-      height: 100%;
-      width: 50%;
-      padding: 50px 0;
-      // max-width: 1300px;
-      // min-width: 600px;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      margin: 0 auto;
+      height: 400px;
     }
 
     .left_wrap {
-      // flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      margin-left: 10%;
 
       .top_wrap {
-        margin-left: 20px;
-        // flex: 2.5;
-        display: flex;
-        flex-direction: column;
-        // align-items: center;
-        justify-content: center;
+        padding-right: 80px;
+        text-align: left;
+        margin-bottom: 50px;
+
+        span {
+          padding: 5px 30px 5px 15px;
+          background: #fdc23e;
+          color: #fff;
+          text-align: left;
+          border-radius: 16px;
+          letter-spacing: 3px;
+          margin-bottom: 20px;
+          white-space: nowrap;
+        }
 
         h2 {
-          text-align: left;
-          font-size: 20px;
+          font-size: 16px;
+          color: #bfbfbf;
+
           &.main_title {
-            font-size: 28px;
+            margin-top: 20px;
+            font-size: 32px;
+            color: #595959;
           }
         }
       }
 
       .bottom_wrap {
-        margin-top: 10px;
-        // flex: 1;
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         .select_item {
+          margin: 3px 5px;
           flex: 1;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background: #ff7a50;
-          font-size: 16px;
-          font-weight: 600;
-          color: #fff;
-          border-radius: 8px;
-          padding: 15px;
-          box-sizing: border-box;
-          white-space: nowrap;
+          border: 1px solid #009d9f;
+          padding: 10px 0;
+          color: #055052;
           cursor: pointer;
+          border-radius: 4px;
 
-          &:last-child {
-            margin-left: 10px;
-            background: #50eeff;
-          }
-
-          img {
-            margin-left: 10px;
-            width: 25px;
-            height: 25px;
+          &:hover {
+            color: #fff;
+            background: #009d9f;
           }
         }
       }
     }
 
     .home_pic {
-      // flex: 1.5;
-      margin-left: 10px;
+      width: 50%;
+      height: 100%;
     }
   }
 
@@ -284,6 +272,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 
     .content {
       position: relative;
@@ -495,14 +484,18 @@ export default {
 @media screen and (max-width: 800px) {
   #HomePage {
     .first_wrap {
-      > div {
-        width: 100%;
+      >div {
+        // width: 100%;
+
+        .left_wrap {
+          margin-left: 0;;
+        }
       }
       .home_pic {
         // width: 200px;
         // height: 200px;
         width: 50%;
-        height: 100%;
+        height: 80%;
       }
     }
   }

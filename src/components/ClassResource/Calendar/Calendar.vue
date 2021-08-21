@@ -49,7 +49,17 @@
             class="active"
             >{{ item.day.getDate() }}</span
           >
-          <span v-else-if="ifSelected(item.day.getFullYear(),item.day.getMonth()+1,item.day.getDate())" class="selected">{{item.day.getDate()}}</span>
+          <span
+            v-else-if="
+              ifSelected(
+                item.day.getFullYear(),
+                item.day.getMonth() + 1,
+                item.day.getDate()
+              )
+            "
+            class="selected"
+            >{{ item.day.getDate() }}</span
+          >
           <span v-else>{{ item.day.getDate() }}</span>
         </span>
       </li>
@@ -57,9 +67,7 @@
 
     <!-- 事件 -->
     <div class="events_wrap">
-        <div class="events">
-            暂无事件
-        </div>
+      <div class="events">暂无事件</div>
     </div>
   </div>
 </template>
@@ -74,11 +82,11 @@ export default {
       currentWeek: 1,
       days: [],
       //选中的日期
-      selectedDate:{
-          day: '',
-          month: '',
-          year: ''
-      }
+      selectedDate: {
+        day: "",
+        month: "",
+        year: "",
+      },
     };
   },
   created: function () {
@@ -86,7 +94,7 @@ export default {
     this.initData(null);
   },
   methods: {
-      //初始化日期
+    //初始化日期
     initData: function (cur) {
       var leftcount = 0; //存放剩余数量
       var date;
@@ -99,7 +107,7 @@ export default {
         d.setDate(35);
         date = new Date(this.formatDate(d.getFullYear(), d.getMonth() + 1, 1));
       }
-    //   console.log(date);
+      //   console.log(date);
       this.currentDay = date.getDate();
       this.currentYear = date.getFullYear();
       this.currentMonth = date.getMonth() + 1;
@@ -151,29 +159,32 @@ export default {
       //   alert(year + "," + month);
     },
     //点击日期
-    chooseDate(e){
-        // console.log(e.target);
-        let allSelected = document.getElementsByClassName('selected');
-        //清除选中状态
-        if(allSelected){
-            for(let i = 0; i < allSelected.length; i++){
-                allSelected[i].classList.remove('selected')
-            }
+    chooseDate(e) {
+      // console.log(e.target);
+      let allSelected = document.getElementsByClassName("selected");
+      //清除选中状态
+      if (allSelected) {
+        for (let i = 0; i < allSelected.length; i++) {
+          allSelected[i].classList.remove("selected");
         }
-        // 添加选中态样式
-        e.target.classList.add('selected');
-        this.selectedDate.year = this.currentYear;
-        this.selectedDate.month = this.currentMonth;
-        this.selectedDate.day = e.target.innerHTML;
-        // console.log(this.selectedDate);
+      }
+      // 添加选中态样式
+      e.target.classList.add("selected");
+      this.selectedDate.year = this.currentYear;
+      this.selectedDate.month = this.currentMonth;
+      this.selectedDate.day = e.target.innerHTML;
+      // console.log(this.selectedDate);
     },
 
-    ifSelected(year,month,day){
-        // console.log(year,month,day);
-        if(year == this.selectedDate.year && month == this.selectedDate.month && day == this.selectedDate.day)
-            return true;
-        else 
-            return false;
+    ifSelected(year, month, day) {
+      // console.log(year,month,day);
+      if (
+        year == this.selectedDate.year &&
+        month == this.selectedDate.month &&
+        day == this.selectedDate.day
+      )
+        return true;
+      else return false;
     },
 
     // 返回 类似 2016-01-02 格式的字符串
@@ -308,19 +319,57 @@ export default {
   }
 
   .events_wrap {
-      
-      padding: 10px 20px 20px;
+    padding: 10px 20px 20px;
 
-      .events {
-          padding: 10px;
-          width: 100%;
-          height: 80px;
-          overflow: auto;
-          background: #E1F3F5;
-          &::-webkit-scrollbar {
-            width: 0;
-          }
+    .events {
+      padding: 10px;
+      width: 100%;
+      height: 80px;
+      overflow: auto;
+      background: #e1f3f5;
+      &::-webkit-scrollbar {
+        width: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #calendar {
+    .month_wrap {
+      padding: 5px 5px 0;
+
+      .month {
+        li {
+          font-size: 12px;
+          letter-spacing: 0;
+          &.arrow {
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+
+    .weekdays {
+      font-size: 12px;
+    }
+
+    .days {
+      font-size: 12px;
+      padding: 5px;
+      li {
+        padding: 4px 0;
+        span {
+          height: 15px;
+          width: 15px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    .events_wrap {
+      padding: 10px 10px 20px;
+    }
   }
 }
 </style>

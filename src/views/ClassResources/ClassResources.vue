@@ -179,4 +179,22 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:800px){
+  #ClassResources{
+    .class_wrap {
+      width: 100%;
+
+      .left_nav {
+        >li {
+          width: 100px;
+        }
+      }
+
+      .main_content {
+        width: calc(100% - 120px);
+      }
+    }
+  }
+}
 </style>

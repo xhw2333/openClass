@@ -219,6 +219,23 @@
       height: 100%;
       min-height: 78vh;
     }
+
+    .bottom_wrap {
+      .btn_wrap {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .your_ans {
+        padding: 5px 10px;
+      }
+
+      .correct_ans {
+        padding: 5px 10px;
+        background:rgba(24, 144, 255,.1);
+        color:#1890FF;
+      }
+    }
   }
 
 

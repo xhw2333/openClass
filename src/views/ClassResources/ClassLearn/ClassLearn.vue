@@ -24,17 +24,44 @@
           "
           name="name1"
         >
-          <p>请点击下方的链接进入预习，一定要好好预习哦！</p>
+          <!-- <p>请点击下方的链接进入预习，一定要好好预习哦！</p>
           <a href="http://qgailab.com/anywork/student/" target="blank"
             >anywork</a
-          >
+          > -->
+          <Problem
+            :p_index="index"
+            :status="preStatus"
+            :problem="pro"
+            v-for="(pro, index) in preProblem"
+            :key="index"
+            @pass="handleChild"
+          />
+          <div v-show="preProblem.length" class="bottom_wrap">
+            <div class="btn_wrap">
+              <Button
+                @click="preCommit"
+                type="primary"
+                size="large"
+                :disabled="preStatus"
+                >提交</Button
+              >
+            </div>
+            <div class="your_ans" v-show="preStatus">
+              你的答案
+              <span v-for="(pro, index) in preProblem" :key="index">{{
+                pro.user_ans?pro.user_ans:'-'
+              }}</span>
+            </div>
+            <div class="correct_ans" v-show="preStatus">
+              正确答案
+              <span v-for="(pro, index) in preProblem" :key="index">{{
+                pro.correct_ans
+              }}</span>
+            </div>
+          </div>
+          <p v-show="!preProblem.length">请选择章节进行预习</p>
         </TabPane>
-        <TabPane
-          label="章节说明"
-          name="name2"
-        >
-          章节说明
-        </TabPane>
+        <TabPane label="章节说明" name="name2"> {{summary}} </TabPane>
         <TabPane
           :label="
             (h) => {
@@ -63,7 +90,13 @@
           </div>
         </TabPane>
         <TabPane label="课件预览" name="name4">
-          <iframe :src="filesrc" frameborder="0" class="class_file"></iframe>
+          <iframe
+            v-show="filesrc"
+            :src="filesrc"
+            frameborder="0"
+            class="class_file"
+          ></iframe>
+          <p v-show="!filesrc">请选择章节预览课件</p>
         </TabPane>
         <TabPane
           :label="
@@ -80,9 +113,40 @@
           "
           name="name5"
         >
-          <p>
+          <!-- <p>
             请自行打开anyview去进行小测，学习完每章的一小节后就可以去测试了，检验自己的学习成果，根据测试结果再调整自己的学习情况
-          </p>
+          </p> -->
+          <Problem
+            :p_index="index"
+            :problem="pro"
+            :status="testStatus"
+            v-for="(pro, index) in testProblem"
+            :key="index"
+          />
+          <div v-show="testProblem.length" class="bottom_wrap">
+            <div class="btn_wrap">
+              <Button
+                @click="testCommit"
+                type="primary"
+                size="large"
+                :disabled="testStatus"
+                >提交</Button
+              >
+            </div>
+            <div class="your_ans" v-show="testStatus">
+              你的答案
+              <span v-for="(pro, index) in testProblem" :key="index">{{
+                pro.user_ans?pro.user_ans:'-'
+              }}</span>
+            </div>
+            <div class="correct_ans" v-show="testStatus">
+              正确答案
+              <span v-for="(pro, index) in testProblem" :key="index">{{
+                pro.correct_ans
+              }}</span>
+            </div>
+          </div>
+          <p v-show="!testProblem.length">请选择章节进行小测</p>
         </TabPane>
         <TabPane label="课堂讨论" name="name6"> 课堂讨论 </TabPane>
       </Tabs>
@@ -128,7 +192,7 @@
               { class_selected: subtitle === item1.detail[index2].title },
               { class_finished: item2.ifFinished },
             ]"
-            @click="showVideo(index1, index2)"
+            @click="showSection(index1, index2)"
             v-for="(item2, index2) in item1.detail"
             :key="index2"
           >
@@ -200,29 +264,38 @@
 
 <script>
 import { videoData } from "./videoSrc_new";
+import Problem from "../../../components/ClassResource/Problem/Problem";
+import { prePro, testPro } from "../../../assets/data/question";
 export default {
+  components: {
+    Problem,
+  },
   data() {
     return {
       //章节的所有数据
       classesList: videoData,
       //视屏播放地址
-      videoSrc: "http://qgailab.com/course/resources/video/1.5_1.mp4",
+      videoSrc: "",
+      // "http://qgailab.com/course/resources/video/1.5_1.mp4",
       //学习任务
       work: "理解编程语言的特点;初步掌握在计算机上运行程序的方法；理解算法的概念和特性；能够用N-S流程图来表示算法。",
       //主标题
-      mainTitle: "一、算法",
+      mainTitle: "章",
       //副标题
-      subtitle: "算法",
+      subtitle: "小节",
       //进度id
       rateId: -1,
       //视频进度
       videoRate: 0,
       //视频章节
-      videoChapterIndex: 0,
+      videoChapterIndex: -1,
       //视频小章节
-      videoSChapterIndex: 0,
+      videoSChapterIndex: -1,
       //课件地址
-      filesrc: "http://qgailab.com/course/static/pdf/1.1_1.pdf",
+      filesrc: "",
+      // "http://qgailab.com/course/static/pdf/1.1_1.pdf",
+      // 章节说明
+      summary: '请选择章节查看',
       //控制时间函数
       timer: null,
       // 选项
@@ -240,6 +313,14 @@ export default {
           finsihed: false,
         },
       ],
+      // 课前预习提交状态
+      preStatus: false,
+      // 课后小测提交状态
+      testStatus: false,
+      // 课后小测题目
+      preProblem: [],
+      // 课前预习题目
+      testProblem: [],
     };
   },
   created() {
@@ -262,11 +343,13 @@ export default {
         this.rateId = detail[0].id;
         this.videoRate = detail[0].rate;
         this.videoChapterIndex = index;
+        this.preProblem = prePro.get(detail[0].videoId);
+        this.testProblem = testPro.get(detail[0].videoId);
       }
     },
 
-    //展示视频
-    showVideo(index1, index2) {
+    //展示章节
+    showSection(index1, index2) {
       let { title, work, detail } = this.classesList[index1];
       this.videoSrc = detail[index2].video;
       this.subtitle = detail[index2].title;
@@ -274,8 +357,15 @@ export default {
       this.work = work;
       this.rateId = detail[index2].id;
       this.videoRate = detail[index2].rate;
+      this.summary = detail[index2].content;
       this.videoChapterIndex = index1;
       this.videoSChapterIndex = index2;
+      this.preProblem = prePro.get(detail[index2].videoId);
+      this.testProblem = testPro.get(detail[index2].videoId);
+
+      // 先做个测试
+      this.preStatus = false;
+      this.testStatus = false;
     },
 
     //获取视频进度
@@ -438,16 +528,20 @@ export default {
         });
     },
 
-    // 渲染函数
-    renderCard(h) {
-      return h("div", [
-        h("span", card.name),
-        h("i", {
-          class: {
-            circle: card.finsihed,
-          },
-        }),
-      ]);
+    // 获取子组件传来的值
+    handleChild(problem) {
+      console.log(problem);
+    },
+
+    // 提交课前预习
+    preCommit() {
+      this.preStatus = !this.preStatus;
+
+    },
+    // 提交课后小测
+    testCommit() {
+      this.testStatus = !this.testStatus;
+
     },
   },
 };

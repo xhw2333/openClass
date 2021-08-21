@@ -41,7 +41,7 @@
               </li>
               <li class="video">
                 <span>视频预习</span>
-                <span>已学习{{ section.watch }}分钟</span>
+                <span>已学习{{ section.rate }}分钟</span>
               </li>
               <li class="test">
                 <span>课后小测</span>
@@ -100,7 +100,7 @@
 import { studyData } from "./studyData";
 export default {
   data() {
-    console.log(studyData);
+    console.dir(studyData);
     return {
       studyData: studyData,
     };
