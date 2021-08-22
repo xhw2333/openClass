@@ -45,7 +45,7 @@
       <TabPane label="实验指导书" name="name2">
         <div class="experiment_book">
           <iframe
-            src="http://qgailab.com/course/static/pdf/1.8255401.pdf"
+            src="http://qgailab.com/cloud/course/static/pdf/1.8255401.pdf"
             width="100%"
             height="100%"
             style="border:none"
@@ -55,7 +55,7 @@
       <TabPane label="课程设计" name="name3">
         <div class="class_design">
           <iframe
-            src="http://qgailab.com/course/static/pdf/2.f849866.pdf"
+            src="http://qgailab.com/cloud/course/static/pdf/2.f849866.pdf"
             width="100%"
             height="100%"
             style="border:none"

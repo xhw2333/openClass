@@ -33,78 +33,78 @@ export default {
       //学生评价
       studentAssess: [
         {
-          pic: "http://qgailab.com/course/static/img/1.26e7e63.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/1.26e7e63.jpg",
           name: "陈俊丰",
         },
         {
-          pic: "http://qgailab.com/course/static/img/2.566ea9f.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/2.566ea9f.jpg",
           name: "李国延",
         },
         {
-          pic: "http://qgailab.com/course/static/img/3.fb54750.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/3.fb54750.jpg",
           name: "梁永康",
         },
         {
-          pic: "http://qgailab.com/course/static/img/4.99b0e4b.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/4.99b0e4b.jpg",
           name: "叶志活",
         },
         {
-          pic: "http://qgailab.com/course/static/img/5.ea9375e.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/5.ea9375e.jpg",
           name: "张润鹏",
         },
         {
-          pic: "http://qgailab.com/course/static/img/6.c823b34.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/6.c823b34.jpg",
           name: "张艺隽",
         },
         {
-          pic: "http://qgailab.com/course/static/img/7.c1008c1.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/7.c1008c1.jpg",
           name: "章世楠",
         },
         {
-          pic: "http://qgailab.com/course/static/img/8.00c3023.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/8.00c3023.jpg",
           name: "郑俊铭",
         },
         {
-          pic: "http://qgailab.com/course/static/img/9.aebbb50.jpg",
+          pic: "http://qgailab.com/cloud/course/static/img/9.aebbb50.jpg",
           name: "郑伟滨",
         },
       ],
       //学生反馈表
       studentTable: [
         {
-          pic: "http://qgailab.com/course/static/img/1.f671ea7.png",
+          pic: "http://qgailab.com/cloud/course/static/img/1.f671ea7.png",
           name: "郑俊铭",
         },
         {
-          pic: "http://qgailab.com/course/static/img/2.9dbb0e8.png",
+          pic: "http://qgailab.com/cloud/course/static/img/2.9dbb0e8.png",
           name: "张艺隽",
         },
         {
-          pic: "http://qgailab.com/course/static/img/3.2a39c47.png",
+          pic: "http://qgailab.com/cloud/course/static/img/3.2a39c47.png",
           name: "张润鹏",
         },
         {
-          pic: "http://qgailab.com/course/static/img/4.207bda2.png",
+          pic: "http://qgailab.com/cloud/course/static/img/4.207bda2.png",
           name: "章世楠",
         },
         {
-          pic: "http://qgailab.com/course/static/img/5.912129d.png",
+          pic: "http://qgailab.com/cloud/course/static/img/5.912129d.png",
           name: "梁永康",
         },
         {
-          pic: "http://qgailab.com/course/static/img/6.e2dba6c.png",
+          pic: "http://qgailab.com/cloud/course/static/img/6.e2dba6c.png",
           name: "陈俊丰",
         },
         {
-          pic: "http://qgailab.com/course/static/img/7.668fd7a.png",
+          pic: "http://qgailab.com/cloud/course/static/img/7.668fd7a.png",
           name: "叶志活",
         },
         {
-          pic: "http://qgailab.com/course/static/img/8.71bfa98.png",
+          pic: "http://qgailab.com/cloud/course/static/img/8.71bfa98.png",
           name: "周欣晖",
         },
         {
-          pic: "http://qgailab.com/course/static/img/9.41b41e6.png",
+          pic: "http://qgailab.com/cloud/course/static/img/9.41b41e6.png",
           name: "郑伟滨",
         },
       ],

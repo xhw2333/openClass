@@ -23,7 +23,7 @@
         <router-link class="login-item" to="/Login">注册</router-link>
       </div>
       <div class="login-wrap" v-show="userNumber">
-        <span>学号 {{ userNumber }} 用户,你好</span>
+        <span>学号 {{ userNumber }} 用户<i style="font-style:normal">,你好</i></span>
         <span class="login-item" @click="handleExit()">退出</span>
       </div>
     </div>
@@ -183,7 +183,7 @@ export default {
 @media screen and (max-width: 800px) {
   .Header {
     .container {
-      width: 95%;
+      width: 98%;
 
       .first-wrap {
         h1 {
@@ -198,6 +198,17 @@ export default {
             .nav_item {
               padding: 0 25px;
             }
+          }
+        }
+      }
+
+      .login-wrap {
+        span {
+          font-size: 12px;
+          margin: 0;
+
+          i {
+            display: none;
           }
         }
       }

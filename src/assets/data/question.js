@@ -1,6 +1,7 @@
 export const prePro = new Map([
-    [66, [
+    [101, [
         {
+            id: 1,
             title: "下列关于算法的说法中不正确的是()",
             select: [
                 {
@@ -25,8 +26,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [67, [
+    [102, [
         {
+            id: 4,
             title: "算法有哪五个特性",
             select: [
                 {
@@ -51,8 +53,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [68, [
+    [103, [
         {
+            id: 6,
             title: "算法表示有哪几种",
             select: [
                 {
@@ -77,8 +80,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [69, [
+    [104, [
         {
+            id: 8,
             title: "程序的三种基本结构",
             select: [
                 {
@@ -103,8 +107,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [70, [
+    [105, [
         {
+            id: 10,
             title: "一个C程序的执行是从",
             select: [
                 {
@@ -129,8 +134,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [71, [
+    [106, [
         {
+            id: 12,
             title: "下列选项中不是结构化程序基本结构的是",
             select: [
                 {
@@ -155,8 +161,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [72, [
+    [107, [
         {
+            id: 14,
             title: "程序由什么构成",
             select: [
                 {
@@ -181,8 +188,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [73, [
+    [108, [
         {
+            id: 16,
             title: "以下选项中可作为C语言合法常量的是",
             select: [
                 {
@@ -207,8 +215,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [74, [
+    [109, [
         {
+            id: 18,
             title: "下列C语言标识符中合法的变量名",
             select: [
                 {
@@ -233,8 +242,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [75, [
+    [110, [
         {
+            id: 21,
             title: "__是C语言提供的合法的数据类型关键字",
             select: [
                 {
@@ -259,8 +269,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [76, [
+    [111, [
         {
+            id: 23,
             title: "char型常量在内存中存放的是",
             select: [
                 {
@@ -285,8 +296,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [77, [
+    [112, [
         {
+            id: 25,
             title: "C语言中，float类型数据占___个字节",
             select: [
                 {
@@ -311,8 +323,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [78, [
+    [113, [
         {
+            id: 27,
             title: "算术运算符、赋值运算符和关系运算符的运算优先级按从高到低依次为",
             select: [
                 {
@@ -337,8 +350,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [79, [
+    [114, [
         {
+            id: 29,
             title: "C语言中x*=y+2;，还可以写成",
             select: [
                 {
@@ -363,8 +377,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [80, [
+    [115, [
         {
+            id: 31,
             title: "若变量已正确定义并赋值，下面符合C语言语法的表达式是",
             select: [
                 {
@@ -389,8 +404,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [81, [
+    [116, [
         {
+            id: 34,
             title: "以下叙述不正确的是",
             select: [
                 {
@@ -415,8 +431,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [82, [
+    [117, [
         {
+            id: 36,
             title: "选出下列标识符中不是合法的标识符的是",
             select: [
                 {
@@ -441,8 +458,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [83, [
+    [118, [
         {
+            id: 38,
             title: "若x和y都是int型变量，x=100，y=200，且有下面的程序片段：printf(\"%d\",(x,y)); 输出",
             select: [
                 {
@@ -467,8 +485,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [84, [
+    [119, [
         {
+            id: 40,
             title: "int main( ) { int m=5; if(m++>5)printf(\"%d\\n\"，m);  else printf(\"%d\\n\"，m--); } 输出结果为",
             select: [
                 {
@@ -493,8 +512,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [85, [
+    [120, [
         {
+            id: 42,
             title: "C 语言中，逻辑“真”等价于",
             select: [
                 {
@@ -519,8 +539,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [86, [
+    [121, [
         {
+            id: 45,
             title: "当a=5,b=2 时,表达式a= =b 的值为",
             select: [
                 {
@@ -545,8 +566,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [87, [
+    [122, [
         {
+            id: 47,
             title: "下列表达式中能表示a 在0 到100 之间的是",
             select: [
                 {
@@ -571,8 +593,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [88, [
+    [123, [
         {
+            id: 50,
             title: "运算符优先级正确的是",
             select: [
                 {
@@ -597,8 +620,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [89, [
+    [124, [
         {
+            id: 53,
             title: "C语言的 switch 语句中，case 后",
             select: [
                 {
@@ -627,8 +651,9 @@ export const prePro = new Map([
 
 
 export const testPro = new Map([
-    [66, [
+    [101, [
         {
+            id: 2,
             title: "算法分析的目的是()",
             select: [
                 {
@@ -653,6 +678,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 3,
             title: "算法分哪几种类",
             select: [
                 {
@@ -677,8 +703,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [67, [
+    [102, [
         {
+            id: 5,
             title: "程序可以不满足以下()特征",
             select: [
                 {
@@ -703,8 +730,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [68, [
+    [103, [
         {
+            id: 7,
             title: "算法是指解决问题的一种方法或一个过程，描述算法的方式有很多，如()",
             select: [
                 {
@@ -729,8 +757,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [69, [
+    [104, [
         {
+            id: 9,
             title: "三种结构的特点哪个是正确的()",
             select: [
                 {
@@ -755,8 +784,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [70, [
+    [105, [
         {
+            id: 11,
             title: "在C语言程序中，注释部分从哪开始，到哪结束",
             select: [
                 {
@@ -781,8 +811,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [71, [
+    [106, [
         {
+            id: 13,
             title: "结构程序化设计不应该使用",
             select: [
                 {
@@ -807,8 +838,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [72, [
+    [107, [
         {
+            id: 15,
             title: "下列说法中正确的是",
             select: [
                 {
@@ -833,8 +865,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [73, [
+    [108, [
         {
+            id: 17,
             title: "下面不正确的字符串常量是",
             select: [
                 {
@@ -859,8 +892,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [74, [
+    [109, [
         {
+            id: 19,
             title: "下列变量定义不合法的是",
             select: [
                 {
@@ -885,6 +919,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 20,
             title: "下列变量定义合法的是",
             select: [
                 {
@@ -909,8 +944,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [75, [
+    [110, [
         {
+            id: 22,
             title: "数据类型分几四大类型",
             select: [
                 {
@@ -935,8 +971,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [76, [
+    [111, [
         {
+            id: 24,
             title: "以下选项中不属于C语言的类型是",
             select: [
                 {
@@ -961,8 +998,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [77, [
+    [112, [
         {
+            id: 26,
             title: "属于合法的C语言长整型常量的是",
             select: [
                 {
@@ -987,8 +1025,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [78, [
+    [113, [
         {
+            id: 28,
             title: "在C语言中，要求参加运算的数必须是整数的运算符是",
             select: [
                 {
@@ -1013,8 +1052,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [79, [
+    [114, [
         {
+            id: 30,
             title: "int b=0,x=1;执行语句if(x++) b=x+1; 后，x,b的值依次为",
             select: [
                 {
@@ -1039,8 +1079,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [80, [
+    [115, [
         {
+            id: 32,
             title: "如果有整型变量x,浮点型变量y,双精度型变量z,则表达式y*z+x+y执行后的类型为",
             select: [
                 {
@@ -1065,6 +1106,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 33,
             title: "假定x和y为double型，则表达式x=2,y=x+3/2的值是",
             select: [
                 {
@@ -1089,8 +1131,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [81, [
+    [116, [
         {
+            id: 35,
             title: "以下叙述正确的是",
             select: [
                 {
@@ -1115,8 +1158,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [82, [
+    [117, [
         {
+            id: 37,
             title: "下列不是C语言基本数据类型的是",
             select: [
                 {
@@ -1141,8 +1185,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [83, [
+    [118, [
         {
+            id: 39,
             title: "以下程序的输出结果是int main( ) {int a=12，b=12; printf(\"%d %d\\n\"，--a，++b); }",
             select: [
                 {
@@ -1167,8 +1212,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [84, [
+    [119, [
         {
+            id: 41,
             title: "int a=3; 则执行了语句，a+=a-=a*a; a的值",
             select: [
                 {
@@ -1193,8 +1239,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [85, [
+    [120, [
         {
+            id: 43,
             title: "C语言有哪两种选择语句",
             select: [
                 {
@@ -1219,6 +1266,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 44,
             title: "哪个不是if语句的一般形式",
             select: [
                 {
@@ -1243,8 +1291,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [86, [
+    [121, [
         {
+            id: 46,
             title: "int main(){ int a=5,b=4,c=6,d;printf(\"%d\\n\",d=a>b?(a>c?a:c):(b));} 输出",
             select: [
                 {
@@ -1269,6 +1318,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 47,
             title: "判断char型量ch是否为大写字母的正确表达式是",
             select: [
                 {
@@ -1293,8 +1343,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [87, [
+    [122, [
         {
+            id: 48,
             title: "设有定义：int a=3,b=4,c=5;则语句printf(“%d\n”,a+b>c&&b==c);的输出结果是",
             select: [
                 {
@@ -1319,6 +1370,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 49,
             title: "若希望当A的值为奇数时，表达式的值为“真”，A的值为偶数时，表达式的值为“假”，则以下不能满足要求的表达式是",
             select: [
                 {
@@ -1343,8 +1395,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [88, [
+    [123, [
         {
+            id: 51,
             title: "若执行以下程序时从键盘上输入9，则输出结果是__ main(){ int n;scanf(\"%d\",&n);if(n++<10) printf(\"%d\\n\",n);else printf(\"%d\\n\",n--);}",
             select: [
                 {
@@ -1369,6 +1422,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
+            id: 52,
             title: "已知int x=10,y=20,z=30;以下语句执行后x，y，z的值是__ if(x>y) z=x; x=y; y=z; ",
             select: [
                 {
@@ -1393,8 +1447,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [89, [
+    [124, [
         {
+            id: 54,
             title: "以下程序输入3输出结果为__int main(){ int k;scanf(“%d”,&k);switch(k){  case 1:printf(“%d”,k++);case 2:printf(“%d”,k++);case 3:printf(“%d”,k++);case 4:printf(“%d”,k++); break; default :printf(“FULL!”); }printf(“\\n”); }",
             select: [
                 {

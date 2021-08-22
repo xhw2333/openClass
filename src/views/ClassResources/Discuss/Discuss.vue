@@ -104,7 +104,7 @@ export default {
         // //添加图片
         // sendContent.appendChild(img);
         // this.discussContent += `<img style="max-width:400px" src="${require("../../../assets/login.png")}"/>`
-        this.discussContent += ` <img style="max-width:400px" src="http://qgailab.com/course/static/img/produce.764a13f.png"/> `;
+        this.discussContent += ` <img style="max-width:400px" src="http://qgailab.com/cloud/course/static/img/produce.764a13f.png"/> `;
       };
       fr.readAsDataURL(file); */
 

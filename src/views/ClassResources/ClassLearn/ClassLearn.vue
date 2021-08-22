@@ -13,10 +13,10 @@
           :label="
             (h) => {
               return h('div', [
-                h('span', card[0].name),
+                h('span', '课前预习'),
                 h('i', {
                   class: {
-                    circle: !card[0].finsihed,
+                    circle: !preStatus,
                   },
                 }),
               ]);
@@ -49,7 +49,7 @@
             <div class="your_ans" v-show="preStatus">
               你的答案
               <span v-for="(pro, index) in preProblem" :key="index">{{
-                pro.user_ans?pro.user_ans:'-'
+                pro.user_ans ? pro.user_ans : "-"
               }}</span>
             </div>
             <div class="correct_ans" v-show="preStatus">
@@ -61,15 +61,15 @@
           </div>
           <p v-show="!preProblem.length">请选择章节进行预习</p>
         </TabPane>
-        <TabPane label="章节说明" name="name2"> {{summary}} </TabPane>
+        <TabPane label="章节说明" name="name2"> {{ summary }} </TabPane>
         <TabPane
           :label="
             (h) => {
               return h('div', [
-                h('span', card[1].name),
+                h('span', '视频学习'),
                 h('i', {
                   class: {
-                    circle: !card[1].finsihed,
+                    circle: !videoStatus
                   },
                 }),
               ]);
@@ -102,10 +102,10 @@
           :label="
             (h) => {
               return h('div', [
-                h('span', card[2].name),
+                h('span', '课后小测'),
                 h('i', {
                   class: {
-                    circle: !card[2].finsihed,
+                    circle: !testStatus,
                   },
                 }),
               ]);
@@ -136,7 +136,7 @@
             <div class="your_ans" v-show="testStatus">
               你的答案
               <span v-for="(pro, index) in testProblem" :key="index">{{
-                pro.user_ans?pro.user_ans:'-'
+                pro.user_ans ? pro.user_ans : "-"
               }}</span>
             </div>
             <div class="correct_ans" v-show="testStatus">
@@ -293,26 +293,13 @@ export default {
       videoSChapterIndex: -1,
       //课件地址
       filesrc: "",
-      // "http://qgailab.com/course/static/pdf/1.1_1.pdf",
+      // "http://qgailab.com/cloud/course/static/pdf/1.1_1.pdf",
       // 章节说明
-      summary: '请选择章节查看',
+      summary: "请选择章节查看",
       //控制时间函数
       timer: null,
-      // 选项
-      card: [
-        {
-          name: "课前预习",
-          finsihed: false,
-        },
-        {
-          name: "视频学习",
-          finsihed: false,
-        },
-        {
-          name: "课后测试",
-          finsihed: false,
-        },
-      ],
+      // 视屏观看情况
+      videoStatus: false,
       // 课前预习提交状态
       preStatus: false,
       // 课后小测提交状态
@@ -321,6 +308,8 @@ export default {
       preProblem: [],
       // 课前预习题目
       testProblem: [],
+      // 视频id
+      videoId: -1,
     };
   },
   created() {
@@ -329,17 +318,16 @@ export default {
   methods: {
     //展示收起详细内容
     showDetail(index) {
-      let { title, work, detail, show, file } = this.classesList[index];
+      let { title, detail, show, file } = this.classesList[index];
       this.classesList[index].show = !this.classesList[index].show;
-      this.filesrc = file;
-      console.log(file);
 
       //展开详细内容时更新
       if (!show) {
+        this.filesrc = file;
         this.videoSrc = detail[0].video;
+        this.videoStatus = detail[0].ifFinished;
         this.subtitle = detail[0].title;
         this.mainTitle = title;
-        this.work = work;
         this.rateId = detail[0].id;
         this.videoRate = detail[0].rate;
         this.videoChapterIndex = index;
@@ -362,10 +350,19 @@ export default {
       this.videoSChapterIndex = index2;
       this.preProblem = prePro.get(detail[index2].videoId);
       this.testProblem = testPro.get(detail[index2].videoId);
+      this.videoStatus = detail[index2].ifFinished;
+      this.videoId = detail[index2].videoId;
 
-      // 先做个测试
+      const preExe = this.getExerciesId(this.preProblem),
+            revExe = this.getExerciesId(this.testProblem);
+
+      // 先重置为未提交的状态，再请求最新的状态
       this.preStatus = false;
       this.testStatus = false;
+
+      // 查看章节完成情况
+      this.checkChapter(preExe,revExe,this.videoId);
+
     },
 
     //获取视频进度
@@ -528,6 +525,42 @@ export default {
         });
     },
 
+    // 查看章节预习、小测情况
+    checkChapter(preExe, revExe, videoId) {
+      console.log(...arguments);
+      const userId = window.sessionStorage.getItem("userId") || 1;
+      const data = new FormData();
+      data.append("userId", userId);
+      data.append("previewExercisesId[]", preExe);
+      data.append("videoId", videoId);
+      data.append("reviewExercisesId[]", revExe);
+      this.$http
+        .post(this.domain + "/exercises/show", data)
+        .then((res) => {
+          console.log(res);
+          const {code,data} = res.data;
+
+          if(code !== 1){
+            this.$Message.error('获取答题记录失败')
+            return;
+          }
+          const {preview,review,previewDetails,reviewDetails} = data;
+          this.preStatus = preview; //预习情况
+          this.testStatus = review; //小测情况
+          previewDetails && previewDetails.forEach((v,i)=>{
+            this.preProblem[i].user_ans = v;
+          });
+          reviewDetails && reviewDetails.forEach((v,i)=>{
+            this.testProblem[i].user_ans = v;
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+          if(!userId) return this.$Message.info('登录获取答题记录');
+          this.$Message.error('服务器连接失败');
+        });
+    },
+
     // 获取子组件传来的值
     handleChild(problem) {
       console.log(problem);
@@ -537,12 +570,61 @@ export default {
     preCommit() {
       this.preStatus = !this.preStatus;
 
+      this.handleCommit(this.getExerciesId(this.preProblem),this.getExerciesSelect(this.preProblem),0);
+
     },
     // 提交课后小测
     testCommit() {
       this.testStatus = !this.testStatus;
 
+      this.handleCommit(this.getExerciesId(this.testProblem),this.getExerciesSelect(this.testProblem),1);
     },
+
+    // 处理提交
+    handleCommit(exercisesId,choose,flag){
+      console.log(...arguments);
+      const userId = window.sessionStorage.getItem('userId') || 1;
+      const data = new FormData();
+      data.append('userId',parseInt(userId));
+      data.append('exercisesId[]',exercisesId); //练习题对应的id
+      data.append('choose[]',choose);  //选项
+      data.append('videoId',this.videoId);
+      data.append('flag',flag); // 标志 0 - 预习 ， 1 - 小测
+
+      this.$http.post(this.domain + '/exercises/check',data).then(res=>{
+        console.log(res);
+        const {data,code} = res.data;
+        if(code === 1){
+          return this.$Message.success('提交成功');
+        }
+        this.$Message.error('提交失败');
+      }).catch(err=>{
+        console.log(err);
+        this.$Message.error('服务器连接失败');
+      })
+    },
+
+    // 获取练习题对应的id
+    getExerciesId(exercises) {
+      const arr = [];
+
+      for (const e of exercises) {
+        arr.push(e.id);
+      }
+
+      return arr;
+    },
+
+    //获取练习题对应的选项
+    getExerciesSelect(exercises){
+      const arr = [];
+
+      for (const e of exercises) {
+        arr.push(e.user_ans);
+      }
+
+      return arr;
+    }
   },
 };
 </script>

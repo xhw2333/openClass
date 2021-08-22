@@ -117,7 +117,65 @@ export default {
       this.studyData[index1].detail[index2].show =
         !this.studyData[index1].detail[index2].show;
     },
+
+    //获取学习情况
+    getStudyData() {
+      const data = new FormData();
+      data.append("userId", window.sessionStorage.getItem("userId")); //用户id
+      const loading = this.$Message.loading({
+        content: "Loading...",
+        duration: 0,
+      });
+      this.$http.post(this.domain + "/rate/sr", data).then((res) => {
+        console.log(res);
+
+        let { code, data } = res.data;
+        if (code !== 1) return this.$Message.error("获取学习情况失败");
+        this.$Message.success("获取学习情况成功");
+        //渲染每个视频的进度
+        data.forEach((item, index) => {
+          for (let i = 0; i < this.studyData.length; i++) {
+            let len = this.studyData[i].detail.length;
+            for (let j = 0; j < len; j++) {
+              // console.log()
+              if (this.studyData[i].detail[j].videoId == item.videoId) {
+                //进度id
+                this.studyData[i].detail[j].id = item.id;
+                // 预习情况
+                this.studyData[i].detail[j].ifPreview = item.preview
+                //小测情况
+                this.studyData[i].detail[j].ifTest = item.review;
+                //视频进度
+                this.studyData[i].detail[j].rate = this.formMatter(item.rate);
+                break;
+              }
+            }
+          }
+        });
+
+      }).catch((err) => {
+          console.log(err);
+          if (!window.sessionStorage.getItem("userId")) {
+            this.$Message.info("登录获取学习情况");
+          } else this.$Message.error("服务器连接失败");
+        })
+        .finally(() => {
+          setTimeout(loading, 0);
+        });
+    },
+
+    // 转换格式
+    formMatter(rate){
+      let now;
+      now = ' ' + parseInt(rate/60) + ':' + (rate%60) + ' ';
+      return now;
+    }
+
   },
+
+  created(){
+    this.getStudyData();
+  }
 };
 </script>
 

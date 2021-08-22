@@ -16,7 +16,7 @@
     </div>
     <div class="student-awards">
       <!-- <iframe
-        src="http://qgailab.com/course/static/pdf/4.c74a1e8.pdf"
+        src="http://qgailab.com/cloud/course/static/pdf/4.c74a1e8.pdf"
         width="100%"
         height="100%"
         style="border: none"

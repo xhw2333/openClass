@@ -12,7 +12,7 @@
     <div>
       <p>指导大学生创新创业训练项目</p>
       <!-- <iframe
-        src="http://qgailab.com/course/static/pdf/5.0b9f967.pdf"
+        src="http://qgailab.com/cloud/course/static/pdf/5.0b9f967.pdf"
         class="guide_project"
       ></iframe> -->
       <!-- <img src="../../../assets/pdf/innovation.jpg" alt=""> -->
@@ -21,7 +21,7 @@
     <div>
       <p>专利</p>
       <!-- <iframe
-        src="http://qgailab.com/course/static/pdf/6.d18a2da.pdf"
+        src="http://qgailab.com/cloud/course/static/pdf/6.d18a2da.pdf"
         class="guide_project"
       ></iframe> -->
       <!-- <img src="../../../assets/pdf/patent.jpg" alt="" /> -->

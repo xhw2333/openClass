@@ -106,7 +106,7 @@
       <TabPane label="课程安排" name="name4">
         <div class="class_arrange">
           <!-- <iframe
-            src="http://qgailab.com/course/static/pdf/1.9e2aa70.pdf"
+            src="http://qgailab.com/cloud/course/static/pdf/1.9e2aa70.pdf"
             width="100%"
             height="100%"
             style="border:none"

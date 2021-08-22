@@ -15,7 +15,7 @@
             </div>
             <a
               class="select_item"
-              href="http://qgailab.com/anywork/html/login.html"
+              href="http://qgailab.com/anywork/student/"
               target="blank"
               >在线测试
               <!-- <img

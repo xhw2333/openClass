@@ -183,7 +183,7 @@ export default {
 @media screen and (max-width:800px){
   #ClassResources{
     .class_wrap {
-      width: 100%;
+      width: 98%;
 
       .left_nav {
         >li {
