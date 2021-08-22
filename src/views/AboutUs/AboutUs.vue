@@ -38,4 +38,15 @@ export default {
     word-wrap: break-word;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .about-us {
+    width: 98%;
+
+    .about-us-main {
+      width: calc(100% - 120px);
+      margin: -36px 0 0 20px;
+    }
+  }
+}
 </style>

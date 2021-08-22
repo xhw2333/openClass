@@ -285,3 +285,20 @@
   }
 
 }
+
+@media screen and (max-width: 800px) {
+  #ClassLearn {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+
+    .main_content {
+      width: 100%;
+    }
+
+    .class_list{
+      // width: 100px;
+      width: 100%;;
+    }
+  }
+}

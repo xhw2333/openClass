@@ -1,16 +1,16 @@
 <template>
   <div class="about-us-ul">
     <ul>
-      <li @click="addActive(0)">
+      <!-- <li @click="addActive(0)">
         <router-link to="/UniversityAlliance">高校联盟</router-link>
-      </li>
-      <li @click="addActive(1)">
+      </li> -->
+      <li @click="addActive(0)">
         <router-link to="/TeacherGroup">广东工业大学</router-link>
       </li>
-      <li @click="addActive(2)">
+      <li @click="addActive(1)">
         <router-link to="/ReformAndResearch">教学改革与研究</router-link>
       </li>
-      <li @click="addActive(3)">
+      <li @click="addActive(2)">
         <router-link to="/ActivitySilhouette">活动剪影</router-link>
       </li>
       <!-- <li @click="addActive(3)">
@@ -75,6 +75,11 @@ export default {
     a {
       color: white;
     }
+  }
+}
+@media screen and (max-width:800px) {
+  .about-us-ul {
+    width: 100px;
   }
 }
 </style>

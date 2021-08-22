@@ -415,6 +415,7 @@ export default {
           background: #57aeb1;
           cursor: pointer;
           border-radius: 5px;
+          margin: 10px 0;
 
           &:last-child {
             margin-left: 10px;

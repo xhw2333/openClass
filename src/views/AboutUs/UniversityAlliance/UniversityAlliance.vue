@@ -329,7 +329,7 @@ export default {
       // box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
       height: 64px;
       line-height: 64px;
-      width: 18%;
+      // width: 18%;
       margin: 6px 6px;
       display: flex;
       border-radius: 8px;

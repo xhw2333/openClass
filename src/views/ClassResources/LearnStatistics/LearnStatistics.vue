@@ -41,7 +41,7 @@
               </li>
               <li class="video">
                 <span>视频预习</span>
-                <span>已学习{{ section.rate }}分钟</span>
+                <span>已学习<i style="font-style:normal;font-weight:600;">{{ section.rate }}</i>分钟</span>
               </li>
               <li class="test">
                 <span>课后小测</span>

@@ -272,7 +272,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
     .content {
       position: relative;
