@@ -528,7 +528,7 @@ export default {
     // 查看章节预习、小测情况
     checkChapter(preExe, revExe, videoId) {
       console.log(...arguments);
-      const userId = window.sessionStorage.getItem("userId") || 1;
+      const userId = window.sessionStorage.getItem("userId");
       const data = new FormData();
       data.append("userId", userId);
       data.append("previewExercisesId[]", preExe);
@@ -583,7 +583,7 @@ export default {
     // 处理提交
     handleCommit(exercisesId,choose,flag){
       console.log(...arguments);
-      const userId = window.sessionStorage.getItem('userId') || 1;
+      const userId = window.sessionStorage.getItem('userId') ;
       const data = new FormData();
       data.append('userId',parseInt(userId));
       data.append('exercisesId[]',exercisesId); //练习题对应的id
