@@ -204,8 +204,8 @@ export default {
             this.$router.push({ path: "/HomePage" });
           }, 500);
         } else {
-          this.getLoginCode(loginForm.email, "login-code");
           this.$Message.info(res.data.msg);
+          this.getLoginCode(this.loginForm.email, "login-code");
         }
       });
     },

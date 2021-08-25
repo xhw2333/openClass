@@ -19,6 +19,13 @@
           </p>
           <!-- <p class="time">2021/02/01 14:00</p> -->
         </li>
+        <li>
+          <h3 class="title">通知</h3>
+          <p class="content">
+            课程学习在学习后需隔一段时间，才能获取到最新的进度，不要因为自己的进度还没更新而感到疑惑哈
+          </p>
+          <!-- <p class="time">2021/02/01 14:00</p> -->
+        </li>
       </ul>
       <div class="calendar"><Calendar /></div>
     </div>

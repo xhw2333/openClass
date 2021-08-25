@@ -332,6 +332,23 @@ export default {
   created() {
     this.getVideoStatus();
   },
+  mounted() {
+    let { title, detail, file } = this.classesList[0];
+    console.log(title, detail, file);
+    this.filesrc = file;
+    this.videoSrc = detail[0].video;
+    this.videoStatus = detail[0].ifFinished;
+    this.subtitle = detail[0].title;
+    this.mainTitle = title;
+    this.rateId = detail[0].id;
+    this.videoRate = detail[0].rate;
+    this.videoSChapterIndex = 0;
+    this.videoChapterIndex = 0;
+    this.preProblem = prePro.get(detail[0].videoId);
+    this.testProblem = testPro.get(detail[0].videoId);
+    this.summary = detail[0].content;
+    this.videoId = detail[0].videoId;
+  },
   methods: {
     //展示收起详细内容
     showDetail(index) {
@@ -348,9 +365,11 @@ export default {
         this.rateId = detail[0].id;
         this.videoRate = detail[0].rate;
         this.videoChapterIndex = index;
+        this.videoSChapterIndex = 0;
         this.preProblem = prePro.get(detail[0].videoId);
         this.testProblem = testPro.get(detail[0].videoId);
         this.summary = detail[0].content;
+        this.videoId = detail[0].videoId;
       }
     },
 
@@ -481,6 +500,7 @@ export default {
             if (this.classesList[i].detail[j].id == this.rateId) {
               if (video.currentTime >= video.duration) {
                 this.classesList[i].detail[j].rate = Math.floor(video.duration);
+                this.classesList[i].detail[j].ifFinished = true;
               } else {
                 this.classesList[i].detail[j].rate = Math.floor(
                   video.currentTime
@@ -595,8 +615,6 @@ export default {
 
     // 提交课前预习
     preCommit() {
-      this.preStatus = !this.preStatus;
-
       this.handleCommit(
         this.getExerciesId(this.preProblem),
         this.getExerciesSelect(this.preProblem),
@@ -605,8 +623,6 @@ export default {
     },
     // 提交课后小测
     testCommit() {
-      this.testStatus = !this.testStatus;
-
       this.handleCommit(
         this.getExerciesId(this.testProblem),
         this.getExerciesSelect(this.testProblem),
@@ -618,6 +634,7 @@ export default {
     handleCommit(exercisesId, choose, flag) {
       console.log(...arguments);
       const userId = window.sessionStorage.getItem("userId");
+      if (!userId) return this.$Message.info("请先登录！");
       const data = new FormData();
       data.append("userId", parseInt(userId));
       data.append("exercisesId[]", exercisesId); //练习题对应的id
@@ -625,19 +642,37 @@ export default {
       data.append("videoId", this.videoId);
       data.append("flag", flag); // 标志 0 - 预习 ， 1 - 小测
 
+      const loading = this.$Message.loading({
+        content: "Loading...",
+        duration: 0,
+      });
+
       this.$http
         .post(this.domain + "/exercises/check", data)
         .then((res) => {
           console.log(res);
           const { data, code } = res.data;
           if (code === 1) {
-            return this.$Message.success("提交成功");
+            this.$Message.success("提交成功");
+
+            if (flag === 1) {
+              this.testStatus = !this.testStatus;
+              this.classesList[this.videoChapterIndex].detail[this.videoSChapterIndex].ifTest = true;
+            } else {
+              this.preStatus = !this.preStatus;
+              this.classesList[this.videoChapterIndex].detail[this.videoSChapterIndex].ifPreview = true;
+            }
+            return;
           }
           this.$Message.error("提交失败");
         })
         .catch((err) => {
           console.log(err);
-          this.$Message.error("服务器连接失败");
+          if (!userId) this.$Message.error("请先登录！");
+          else this.$Message.error("服务器连接失败");
+        })
+        .finally(() => {
+          setTimeout(loading, 0);
         });
     },
 
@@ -662,10 +697,6 @@ export default {
 
       return arr;
     },
-  },
-
-  created() {
-    this.showDetail(0);
   },
 };
 </script>
