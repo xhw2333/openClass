@@ -28,14 +28,21 @@
           <a href="http://qgailab.com/anywork/student/" target="blank"
             >anywork</a
           > -->
-          <Problem
-            :p_index="index"
-            :status="preStatus"
-            :problem="pro"
-            v-for="(pro, index) in preProblem"
-            :key="index"
-            @pass="handleChild"
-          />
+          <div v-for="(pro, index) in preProblem" :key="index">
+            <ChooseProblem
+              v-if="pro.type === 0"
+              :p_index="index"
+              :status="preStatus"
+              :problem="pro"
+              @pass="handleChild"
+            />
+            <FillProblem
+              v-else
+              :p_index="index"
+              :status="preStatus"
+              :problem="pro"
+            />
+          </div>
           <div v-show="preProblem.length" class="bottom_wrap">
             <div class="btn_wrap">
               <Button
@@ -69,7 +76,7 @@
                 h('span', '视频学习'),
                 h('i', {
                   class: {
-                    circle: !videoStatus
+                    circle: !videoStatus,
                   },
                 }),
               ]);
@@ -116,13 +123,21 @@
           <!-- <p>
             请自行打开anyview去进行小测，学习完每章的一小节后就可以去测试了，检验自己的学习成果，根据测试结果再调整自己的学习情况
           </p> -->
-          <Problem
-            :p_index="index"
-            :problem="pro"
-            :status="testStatus"
-            v-for="(pro, index) in testProblem"
-            :key="index"
-          />
+          <div v-for="(pro, index) in testProblem" :key="index">
+            <ChooseProblem
+              v-if="pro.type === 0"
+              :p_index="index"
+              :status="testStatus"
+              :problem="pro"
+              @pass="handleChild"
+            />
+            <FillProblem
+              v-else
+              :p_index="index"
+              :status="testStatus"
+              :problem="pro"
+            />
+          </div>
           <div v-show="testProblem.length" class="bottom_wrap">
             <div class="btn_wrap">
               <Button
@@ -197,7 +212,7 @@
             :key="index2"
           >
             <span class="charpter">{{
-              `${index1 + 1}.${index2 + 1 + " " + item2.title}`
+              `${index1}.${index2 + 1 + " " + item2.title}`
             }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +221,7 @@
               height="14"
               viewBox="0 0 14 14"
               class="icon circle0"
-              v-if="item2.ifFinished"
+              v-if="item2.ifFinished && item2.ifPreview && item2.ifTest"
             >
               <defs>
                 <clipPath id="clip-path">
@@ -264,11 +279,13 @@
 
 <script>
 import { videoData } from "./videoSrc_new";
-import Problem from "../../../components/ClassResource/Problem/Problem";
+import ChooseProblem from "../../../components/ClassResource/Problem/ChooseProblem";
+import FillProblem from "../../../components/ClassResource/Problem/FillProblem.vue";
 import { prePro, testPro } from "../../../assets/data/question";
 export default {
   components: {
-    Problem,
+    ChooseProblem,
+    FillProblem,
   },
   data() {
     return {
@@ -333,6 +350,7 @@ export default {
         this.videoChapterIndex = index;
         this.preProblem = prePro.get(detail[0].videoId);
         this.testProblem = testPro.get(detail[0].videoId);
+        this.summary = detail[0].content;
       }
     },
 
@@ -353,16 +371,18 @@ export default {
       this.videoStatus = detail[index2].ifFinished;
       this.videoId = detail[index2].videoId;
 
-      const preExe = this.getExerciesId(this.preProblem),
-            revExe = this.getExerciesId(this.testProblem);
+      //查看对应章节的情况
+      this.preStatus = detail[index2].ifPreview;
+      this.testStatus = detail[index2].ifTest;
 
-      // 先重置为未提交的状态，再请求最新的状态
-      this.preStatus = false;
-      this.testStatus = false;
+      // 如果有提交时再查看答题情况，否则不需要
+      if (this.preStatus || this.testStatus) {
+        const preExe = this.getExerciesId(this.preProblem),
+          revExe = this.getExerciesId(this.testProblem);
 
-      // 查看章节完成情况
-      this.checkChapter(preExe,revExe,this.videoId);
-
+        // 查看章节完成情况
+        this.checkChapter(preExe, revExe, this.videoId);
+      }
     },
 
     //获取视频进度
@@ -393,6 +413,11 @@ export default {
                     this.classesList[i].detail[j].id = item.id;
                     //视频进度
                     this.classesList[i].detail[j].rate = item.rate;
+                    // 预习情况
+                    this.classesList[i].detail[j].ifPreview = item.preview;
+                    //小测情况
+                    this.classesList[i].detail[j].ifTest = item.review;
+
                     break;
                   }
                 }
@@ -538,26 +563,28 @@ export default {
         .post(this.domain + "/exercises/show", data)
         .then((res) => {
           console.log(res);
-          const {code,data} = res.data;
+          const { code, data } = res.data;
 
-          if(code !== 1){
-            this.$Message.error('获取答题记录失败')
+          if (code !== 1) {
+            this.$Message.error("获取答题记录失败");
             return;
           }
-          const {preview,review,previewDetails,reviewDetails} = data;
+          const { preview, review, previewDetails, reviewDetails } = data;
           this.preStatus = preview; //预习情况
           this.testStatus = review; //小测情况
-          previewDetails && previewDetails.forEach((v,i)=>{
-            this.preProblem[i].user_ans = v;
-          });
-          reviewDetails && reviewDetails.forEach((v,i)=>{
-            this.testProblem[i].user_ans = v;
-          });
+          previewDetails &&
+            previewDetails.forEach((v, i) => {
+              this.preProblem[i].user_ans = v;
+            });
+          reviewDetails &&
+            reviewDetails.forEach((v, i) => {
+              this.testProblem[i].user_ans = v;
+            });
         })
         .catch((err) => {
           console.log(err);
-          if(!userId) return this.$Message.info('登录获取答题记录');
-          this.$Message.error('服务器连接失败');
+          if (!userId) return this.$Message.info("登录获取答题记录");
+          this.$Message.error("服务器连接失败");
         });
     },
 
@@ -570,38 +597,48 @@ export default {
     preCommit() {
       this.preStatus = !this.preStatus;
 
-      this.handleCommit(this.getExerciesId(this.preProblem),this.getExerciesSelect(this.preProblem),0);
-
+      this.handleCommit(
+        this.getExerciesId(this.preProblem),
+        this.getExerciesSelect(this.preProblem),
+        0
+      );
     },
     // 提交课后小测
     testCommit() {
       this.testStatus = !this.testStatus;
 
-      this.handleCommit(this.getExerciesId(this.testProblem),this.getExerciesSelect(this.testProblem),1);
+      this.handleCommit(
+        this.getExerciesId(this.testProblem),
+        this.getExerciesSelect(this.testProblem),
+        1
+      );
     },
 
     // 处理提交
-    handleCommit(exercisesId,choose,flag){
+    handleCommit(exercisesId, choose, flag) {
       console.log(...arguments);
-      const userId = window.sessionStorage.getItem('userId') ;
+      const userId = window.sessionStorage.getItem("userId");
       const data = new FormData();
-      data.append('userId',parseInt(userId));
-      data.append('exercisesId[]',exercisesId); //练习题对应的id
-      data.append('choose[]',choose);  //选项
-      data.append('videoId',this.videoId);
-      data.append('flag',flag); // 标志 0 - 预习 ， 1 - 小测
+      data.append("userId", parseInt(userId));
+      data.append("exercisesId[]", exercisesId); //练习题对应的id
+      data.append("choose[]", choose); //选项
+      data.append("videoId", this.videoId);
+      data.append("flag", flag); // 标志 0 - 预习 ， 1 - 小测
 
-      this.$http.post(this.domain + '/exercises/check',data).then(res=>{
-        console.log(res);
-        const {data,code} = res.data;
-        if(code === 1){
-          return this.$Message.success('提交成功');
-        }
-        this.$Message.error('提交失败');
-      }).catch(err=>{
-        console.log(err);
-        this.$Message.error('服务器连接失败');
-      })
+      this.$http
+        .post(this.domain + "/exercises/check", data)
+        .then((res) => {
+          console.log(res);
+          const { data, code } = res.data;
+          if (code === 1) {
+            return this.$Message.success("提交成功");
+          }
+          this.$Message.error("提交失败");
+        })
+        .catch((err) => {
+          console.log(err);
+          this.$Message.error("服务器连接失败");
+        });
     },
 
     // 获取练习题对应的id
@@ -616,7 +653,7 @@ export default {
     },
 
     //获取练习题对应的选项
-    getExerciesSelect(exercises){
+    getExerciesSelect(exercises) {
       const arr = [];
 
       for (const e of exercises) {
@@ -624,7 +661,11 @@ export default {
       }
 
       return arr;
-    }
+    },
+  },
+
+  created() {
+    this.showDetail(0);
   },
 };
 </script>

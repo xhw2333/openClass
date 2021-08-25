@@ -3,7 +3,7 @@ export const prePro = new Map([
         {
             id: 1,
             title: "下列关于算法的说法中不正确的是()",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "求解某一类问题的算法是唯一的",
@@ -30,7 +30,7 @@ export const prePro = new Map([
         {
             id: 4,
             title: "算法有哪五个特性",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "有穷性、确定性、输入、输出、有效性",
@@ -57,7 +57,7 @@ export const prePro = new Map([
         {
             id: 6,
             title: "算法表示有哪几种",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "自然语言、传统流程图、伪代码、结构化流程图",
@@ -84,7 +84,7 @@ export const prePro = new Map([
         {
             id: 8,
             title: "程序的三种基本结构",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "顺序结构、选择结构、循环结构",
@@ -111,7 +111,7 @@ export const prePro = new Map([
         {
             id: 10,
             title: "一个C程序的执行是从",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "本程序的main函数开始,到main函数结束",
@@ -138,7 +138,7 @@ export const prePro = new Map([
         {
             id: 12,
             title: "下列选项中不是结构化程序基本结构的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "顺序结构",
@@ -165,7 +165,7 @@ export const prePro = new Map([
         {
             id: 14,
             title: "程序由什么构成",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "算法、数据结构",
@@ -192,7 +192,7 @@ export const prePro = new Map([
         {
             id: 16,
             title: "以下选项中可作为C语言合法常量的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "-80",
@@ -219,7 +219,7 @@ export const prePro = new Map([
         {
             id: 18,
             title: "下列C语言标识符中合法的变量名",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "2e3",
@@ -246,7 +246,7 @@ export const prePro = new Map([
         {
             id: 21,
             title: "__是C语言提供的合法的数据类型关键字",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "Float",
@@ -273,7 +273,7 @@ export const prePro = new Map([
         {
             id: 23,
             title: "char型常量在内存中存放的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "ASCII代码值",
@@ -300,7 +300,7 @@ export const prePro = new Map([
         {
             id: 25,
             title: "C语言中，float类型数据占___个字节",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "1",
@@ -327,7 +327,7 @@ export const prePro = new Map([
         {
             id: 27,
             title: "算术运算符、赋值运算符和关系运算符的运算优先级按从高到低依次为",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "算术运算、赋值运算、关系运算",
@@ -354,7 +354,7 @@ export const prePro = new Map([
         {
             id: 29,
             title: "C语言中x*=y+2;，还可以写成",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "x=x*y+2;",
@@ -381,7 +381,7 @@ export const prePro = new Map([
         {
             id: 31,
             title: "若变量已正确定义并赋值，下面符合C语言语法的表达式是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "a:=b+1",
@@ -408,7 +408,7 @@ export const prePro = new Map([
         {
             id: 34,
             title: "以下叙述不正确的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "在C程序中，逗号运算符的优先级最低 ",
@@ -435,7 +435,7 @@ export const prePro = new Map([
         {
             id: 36,
             title: "选出下列标识符中不是合法的标识符的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "hot_do",
@@ -462,7 +462,7 @@ export const prePro = new Map([
         {
             id: 38,
             title: "若x和y都是int型变量，x=100，y=200，且有下面的程序片段：printf(\"%d\",(x,y)); 输出",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "200",
@@ -489,7 +489,7 @@ export const prePro = new Map([
         {
             id: 40,
             title: "int main( ) { int m=5; if(m++>5)printf(\"%d\\n\"，m);  else printf(\"%d\\n\"，m--); } 输出结果为",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "7",
@@ -516,7 +516,7 @@ export const prePro = new Map([
         {
             id: 42,
             title: "C 语言中，逻辑“真”等价于",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "大于零的数",
@@ -543,7 +543,7 @@ export const prePro = new Map([
         {
             id: 45,
             title: "当a=5,b=2 时,表达式a= =b 的值为",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "2",
@@ -570,7 +570,7 @@ export const prePro = new Map([
         {
             id: 47,
             title: "下列表达式中能表示a 在0 到100 之间的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "a>0&a<100",
@@ -597,7 +597,7 @@ export const prePro = new Map([
         {
             id: 50,
             title: "运算符优先级正确的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "关系运算符<算术运算符<赋值运算符<逻辑与运算符",
@@ -624,7 +624,7 @@ export const prePro = new Map([
         {
             id: 53,
             title: "C语言的 switch 语句中，case 后",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "只能为常量",
@@ -647,6 +647,266 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
+    // 绪论
+    [125, [
+        {
+            id: 55,
+            title: "C语言程序是由___构成的",
+            type: 1, 
+            correct_ans: '函数',
+            user_ans: '',
+        },
+    ]],
+    [126, [
+        {
+            id: 57,
+            title: "下列说法中正确的是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "由于C源程序是高级语言程序，因此一定要在TC软件中输入",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "由于C源程序是由字符流组成的，因此可以作为文本文件在任文本编辑的",
+                },
+                {
+                    numb: "C",
+                    content: "由于C程序是高级语言程序，因此输入后即可执行",
+                },
+                {
+                    numb: "D",
+                    content: "由于C程序是高级语言程序，因此它是由命令组成的",
+                },
+            ],
+            correct_ans: 'B',
+            user_ans: '',
+        },
+    ]],
+    // 第四章
+    [127, [
+        {
+            id: 59,
+            title: "break语句只能出现在___语句中",
+            type: 1, 
+            correct_ans: 'switch、for、while',
+            user_ans: '',
+        },
+        {
+            id: 60,
+            title: "continue语句的作用是___",
+            type: 1, 
+            correct_ans: '结束本次循环',
+            user_ans: '',
+        },
+    ]],
+    [128, [
+        {
+            id: 62,
+            title: "执行语句{for(j=0;j<=3;j++) a=1;}后变量j的值是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "0",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "3",
+                },
+                {
+                    numb: "C",
+                    content: "4",
+                },
+                {
+                    numb: "D",
+                    content: "1",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [129, [
+        {
+            id: 64,
+            title: "do-while的循环体至少执行___次",
+            type: 1, 
+            correct_ans: '1',
+            user_ans: '',
+        },
+    ]],
+    [130, [
+        {
+            id: 66,
+            title: "语句while（！y）；中的表达式！y等价于",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "y＝＝0",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "y！＝1",
+                },
+                {
+                    numb: "C",
+                    content: "y＝!0",
+                },
+                {
+                    numb: "D",
+                    content: "y==1",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    // 第五章 68开始
+    [131, [
+        {
+            id: 68,
+            title: "访问数组a的元素时，下标x的取值范围为___ ",
+            type: 1, 
+            correct_ans: '[0,a.length)',
+            user_ans: '',
+        },
+        {
+            id: 69,
+            title: "数组内存是___的。",
+            type: 1, 
+            correct_ans: '连续',
+            user_ans: '',
+        },
+    ]],
+    [132, [
+        {
+            id: 71,
+            title: "以下能对一维数组a进行初始化的语句是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "int a[5]=(0,1,2,3,4,)",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int a(5)={}  ",
+                },
+                {
+                    numb: "C",
+                    content: "int a[3]={0,1,2}",
+                },
+                {
+                    numb: "D",
+                    content: "int a{5}={10*1}",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [133, [
+        {
+            id: 73,
+            title: "若有说明：int a[][3]={{1,2,3},{4,5},{6,7}}; 则数组a的第一维的大小为___",
+            type: 1, 
+            correct_ans: '3',
+            user_ans: '',
+        },
+    ]],
+    [134, [
+        {
+            id: 75,
+            title: "以下对一维数组a的正确说明是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "char a（10）",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int a[]； ",
+                },
+                {
+                    numb: "C",
+                    content: "int k＝5，a[k]；",
+                },
+                {
+                    numb: "D",
+                    content: "char  a[3]={‘a’,’b’,’c’};",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [135, [
+        {
+            id: 77,
+            title: "对二维数组的正确定义是（）",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "int a[ ] [ ]={1,2,3,4,5,6}; ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int a[2] [ ]={1,2,3,4,5,6}; ",
+                },
+                {
+                    numb: "C",
+                    content: "int a[ ] [3]={1,2,3,4,5,6};",
+                },
+                {
+                    numb: "D",
+                    content: "int a[2,3]={1,2,3,4,5,6}; ",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [136, [
+        {
+            id: 79,
+            title: "在数组中，数组名表示___",
+            type: 1,
+            correct_ans: '数组第1个元素的首地址',
+            user_ans: '',
+        },
+    ]],
+    [137, [
+        {
+            id: 81,
+            title: "以下4个字符串函数中，（）所在的头文件与其他3个不同。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "gets",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "strcpy",
+                },
+                {
+                    numb: "C",
+                    content: "strlen",
+                },
+                {
+                    numb: "D",
+                    content: "strcmp",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
 ]);
 
 
@@ -655,7 +915,7 @@ export const testPro = new Map([
         {
             id: 2,
             title: "算法分析的目的是()",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "找出数据结构的合理性",
@@ -680,7 +940,7 @@ export const testPro = new Map([
         {
             id: 3,
             title: "算法分哪几种类",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "数值运算算法、非数值运算算法",
@@ -707,7 +967,7 @@ export const testPro = new Map([
         {
             id: 5,
             title: "程序可以不满足以下()特征",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "输入",
@@ -734,7 +994,7 @@ export const testPro = new Map([
         {
             id: 7,
             title: "算法是指解决问题的一种方法或一个过程，描述算法的方式有很多，如()",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "自然语言方式",
@@ -761,7 +1021,7 @@ export const testPro = new Map([
         {
             id: 9,
             title: "三种结构的特点哪个是正确的()",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "结构内每一部分都有机会被执行到",
@@ -788,7 +1048,7 @@ export const testPro = new Map([
         {
             id: 11,
             title: "在C语言程序中，注释部分从哪开始，到哪结束",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "从“（”开始，到“）”结束",
@@ -815,7 +1075,7 @@ export const testPro = new Map([
         {
             id: 13,
             title: "结构程序化设计不应该使用",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "自顶向下，逐步细化的方法",
@@ -842,7 +1102,7 @@ export const testPro = new Map([
         {
             id: 15,
             title: "下列说法中正确的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "C程序书写时，不区分大小写字母",
@@ -869,7 +1129,7 @@ export const testPro = new Map([
         {
             id: 17,
             title: "下面不正确的字符串常量是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "'abc'",
@@ -896,7 +1156,7 @@ export const testPro = new Map([
         {
             id: 19,
             title: "下列变量定义不合法的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "int a=b=1",
@@ -921,7 +1181,7 @@ export const testPro = new Map([
         {
             id: 20,
             title: "下列变量定义合法的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "short _a=1.1e-1",
@@ -948,7 +1208,7 @@ export const testPro = new Map([
         {
             id: 22,
             title: "数据类型分几四大类型",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "基本类型，枚举类型、空类型、派生类型",
@@ -975,7 +1235,7 @@ export const testPro = new Map([
         {
             id: 24,
             title: "以下选项中不属于C语言的类型是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "signed short int ",
@@ -1002,7 +1262,7 @@ export const testPro = new Map([
         {
             id: 26,
             title: "属于合法的C语言长整型常量的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "5876273",
@@ -1029,7 +1289,7 @@ export const testPro = new Map([
         {
             id: 28,
             title: "在C语言中，要求参加运算的数必须是整数的运算符是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "/",
@@ -1056,7 +1316,7 @@ export const testPro = new Map([
         {
             id: 30,
             title: "int b=0,x=1;执行语句if(x++) b=x+1; 后，x,b的值依次为",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "2,3",
@@ -1083,7 +1343,7 @@ export const testPro = new Map([
         {
             id: 32,
             title: "如果有整型变量x,浮点型变量y,双精度型变量z,则表达式y*z+x+y执行后的类型为",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "双精度",
@@ -1108,7 +1368,7 @@ export const testPro = new Map([
         {
             id: 33,
             title: "假定x和y为double型，则表达式x=2,y=x+3/2的值是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "3.500000 ",
@@ -1135,7 +1395,7 @@ export const testPro = new Map([
         {
             id: 35,
             title: "以下叙述正确的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "在C程序中，每行只能写一条语句",
@@ -1162,7 +1422,7 @@ export const testPro = new Map([
         {
             id: 37,
             title: "下列不是C语言基本数据类型的是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "字符型",
@@ -1189,7 +1449,7 @@ export const testPro = new Map([
         {
             id: 39,
             title: "以下程序的输出结果是int main( ) {int a=12，b=12; printf(\"%d %d\\n\"，--a，++b); }",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "10 10",
@@ -1216,7 +1476,7 @@ export const testPro = new Map([
         {
             id: 41,
             title: "int a=3; 则执行了语句，a+=a-=a*a; a的值",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "-6",
@@ -1243,7 +1503,7 @@ export const testPro = new Map([
         {
             id: 43,
             title: "C语言有哪两种选择语句",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "if语句、switch语句",
@@ -1268,7 +1528,7 @@ export const testPro = new Map([
         {
             id: 44,
             title: "哪个不是if语句的一般形式",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "有else子句部分",
@@ -1295,7 +1555,7 @@ export const testPro = new Map([
         {
             id: 46,
             title: "int main(){ int a=5,b=4,c=6,d;printf(\"%d\\n\",d=a>b?(a>c?a:c):(b));} 输出",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "4",
@@ -1320,7 +1580,7 @@ export const testPro = new Map([
         {
             id: 47,
             title: "判断char型量ch是否为大写字母的正确表达式是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "“A‟<=ch<=”Z‟",
@@ -1347,7 +1607,7 @@ export const testPro = new Map([
         {
             id: 48,
             title: "设有定义：int a=3,b=4,c=5;则语句printf(“%d\n”,a+b>c&&b==c);的输出结果是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "1",
@@ -1372,7 +1632,7 @@ export const testPro = new Map([
         {
             id: 49,
             title: "若希望当A的值为奇数时，表达式的值为“真”，A的值为偶数时，表达式的值为“假”，则以下不能满足要求的表达式是",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "A%2==1",
@@ -1399,7 +1659,7 @@ export const testPro = new Map([
         {
             id: 51,
             title: "若执行以下程序时从键盘上输入9，则输出结果是__ main(){ int n;scanf(\"%d\",&n);if(n++<10) printf(\"%d\\n\",n);else printf(\"%d\\n\",n--);}",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "11",
@@ -1424,7 +1684,7 @@ export const testPro = new Map([
         {
             id: 52,
             title: "已知int x=10,y=20,z=30;以下语句执行后x，y，z的值是__ if(x>y) z=x; x=y; y=z; ",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "x=10,y=20,z=30",
@@ -1451,7 +1711,7 @@ export const testPro = new Map([
         {
             id: 54,
             title: "以下程序输入3输出结果为__int main(){ int k;scanf(“%d”,&k);switch(k){  case 1:printf(“%d”,k++);case 2:printf(“%d”,k++);case 3:printf(“%d”,k++);case 4:printf(“%d”,k++); break; default :printf(“FULL!”); }printf(“\\n”); }",
-            select: [
+            type: 0, select: [
                 {
                     numb: "A",
                     content: "34",
@@ -1471,6 +1731,306 @@ export const testPro = new Map([
                 },
             ],
             correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    // 绪论
+    [125, [
+        {
+            id: 56,
+            title: "下列说法错误的是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "C程序运行步骤是编辑、编译、连接、执行",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "C语言的变量名必须用小写，常量用大写",
+                },
+                {
+                    numb: "C",
+                    content: "C语言的三种基本结构是顺序、选择、循环",
+                },
+                {
+                    numb: "D",
+                    content: "C程序一定由函数构成的",
+                },
+            ],
+            correct_ans: 'B',
+            user_ans: '',
+        },
+    ]],
+    [126, [
+        {
+            id: 58,
+            title: "系统默认的C语言源程序扩展名为.C,需经过___之后,生成.exe文件。",
+            type: 1, 
+            correct_ans: '编译、连接',
+            user_ans: '',
+        },
+    ]],
+    // 第四章
+    [127, [
+        {
+            id: 61,
+            title: "在C语言中，下列说法中正确的是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "do-while语句构成的循环不能用其它语句构成的循环来代替",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "do-while语句构成的循环只能用break语句退出。",
+                },
+                {
+                    numb: "C",
+                    content: "do-while语句构成的循环在while后的表达式非零时结束循环",
+                },
+                {
+                    numb: "D",
+                    content: "do-while语句构成的循环,在while后的表达式为零时结束循环",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [128, [
+        {
+            id: 63,
+            title: "以下程序段 ( ) x=-1; do { x=x*x; } while(x>0); ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "是死循环 ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "循环执行一次",
+                },
+                {
+                    numb: "C",
+                    content: "循环执行二次",
+                },
+                {
+                    numb: "D",
+                    content: "有语法错误",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [129, [
+        {
+            id: 65,
+            title: "下面有关for循环的正确描述是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "for循环只能用于循环次数已经确定的情况",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "for循环是先执行循环体语句，后判定表达式",
+                },
+                {
+                    numb: "C",
+                    content: "在for循环中，不能用break语句跳出循环体",
+                },
+                {
+                    numb: "D",
+                    content: "for循环体语句中，可以包含多条语句，但要用花括号括起来",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [130, [
+        {
+            id: 67,
+            title: "对以下程序段的叙述正确___. int x=1; do  { x= -1*x; } while(!x)",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "是死循环 ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "循环执行一次",
+                },
+                {
+                    numb: "C",
+                    content: "循环执行二次",
+                },
+                {
+                    numb: "D",
+                    content: "有语法错误",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    // 第五章
+    [131, [
+        {
+            id: 70,
+            title: "已知：int  a[10]; 则对a数组元素的正确引用是（）。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "a[10]",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "a[3.5]",
+                },
+                {
+                    numb: "C",
+                    content: "a(5) ",
+                },
+                {
+                    numb: "D",
+                    content: "a[0]",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [132, [
+        {
+            id: 72,
+            title: "假定int类型变量占用两个字节，其有定义：int  x[10]={0,2,4};，则数组x在存中所占字节数是___",
+            type: 1, 
+            correct_ans: '20',
+            user_ans: '',
+        },
+    ]],
+    [133, [
+        {
+            id: 74,
+            title: "若有以下数组说明，int a[12]={1,4,7,10,2,5,8,11,3,6,9,12};则i=10;a[a[i]]元素数值是___。",
+            type: 1, 
+            correct_ans: '9',
+            user_ans: '',
+        },
+    ]],
+    [134, [
+        {
+            id: 76,
+            title: "在C语言中对一维整型数组的正确定义为",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "int a(10);  ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int n=10,a[n]; ",
+                },
+                {
+                    numb: "C",
+                    content: "int  n;a[n];",
+                },
+                {
+                    numb: "D",
+                    content: "#define N 10   int a[N];",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [135, [
+        {
+            id: 78,
+            title: "已知int a[3][4];则对数组元素引用正确的是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "a[2][4] ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "a[1,3] ",
+                },
+                {
+                    numb: "C",
+                    content: "a[2][0]",
+                },
+                {
+                    numb: "D",
+                    content: "a(2)(1)",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [136, [
+        {
+            id: 80,
+            title: "下面程序段的输出结果是: ( C  ) int i;  int x[3][3]={1,2,3,4,5,6,7,8,9};  for (i=0;i<3;i++)  printf(\"%d \",x[i][2-i]); ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "1 5 9 ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "1 4 7",
+                },
+                {
+                    numb: "C",
+                    content: "3 5 7",
+                },
+                {
+                    numb: "D",
+                    content: "3 6 9 ",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [137, [
+        {
+            id: 82,
+            title: "执行下面的程序段后,变量k中的值为（）。int  k=3, s[2]; s[0]=k;  k=s[0]*10;  ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "不定值",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "33",
+                },
+                {
+                    numb: "C",
+                    content: "30",
+                },
+                {
+                    numb: "D",
+                    content: "10",
+                },
+            ],
+            correct_ans: 'C',
             user_ans: '',
         },
     ]],

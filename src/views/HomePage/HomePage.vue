@@ -58,7 +58,7 @@
         </div>
       </div>
     </div> -->
-    <!-- <div class="teacher_teams">
+    <div class="teacher_teams">
       <h3>高校联盟</h3>
       <div class="teacher_list">
         <img src="../../assets/images/shizililiang.png" alt="" class="pic3" />
@@ -86,7 +86,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -492,12 +492,30 @@ export default {
         }
       }
       .home_pic {
-        // width: 200px;
-        // height: 200px;
         width: 50%;
         height: 80%;
       }
     }
+
+    .class_info {
+      .content {
+        padding: 50px;
+
+        .pic1 {
+          transform: translate(15%,-25%);
+        }
+      }
+    }
   }
 }
+
+@media screen and (max-width: 450px){
+  #HomePage {
+     .first_wrap {
+      .home_pic {
+        display: none;
+      }
+    }
+  }
+} 
 </style>

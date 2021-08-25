@@ -1,5 +1,33 @@
 export let videoData = [
   {
+    title: '绪论',
+    show: false, //是否展示详细内容
+    rate: 0, //进度
+    work:
+      '',
+    file: 'http://qgailab.com/cloud/course/static/pdf/0.1_1.pdf', //课件地址
+    detail:[
+      {
+        title: "程序设计绪论（上）",
+        video: "http://qgailab.com/cloud/course/resources/video/0.1_1.mp4",
+        videoId: 125,
+        total: 672, //总时长
+        rate: 0, //观看进度
+        content: '学习C语言的原因，C语言的历史与影响力,运行过程',
+        ifFinished: false, //是否看完
+      },
+      {
+        title: "程序设计绪论（下）",
+        video: "http://qgailab.com/cloud/course/resources/video/0.2_1.mp4",
+        videoId: 126,
+        total: 448, //总时长
+        rate: 0, //观看进度
+        content: '学习C语言的原因，C语言的历史与影响力,运行过程',
+        ifFinished: false, //是否看完
+      },
+    ],
+  },
+  {
     title: "一、算法",
     show: false, //是否展示详细内容
     rate: 0, //进度
@@ -243,6 +271,127 @@ export let videoData = [
         total: 464, //总时长
         rate: 0, //观看进度
         content: 'SWITCH的构成与构建',
+        ifFinished: false,
+      },
+    ],
+  },
+  {
+    title: "四、循环结构",
+    show: false, //是否展示详细内容
+    rate: 0, //进度
+    work:
+      // "http://qgailab.com/cloud/course/static/pdf/2.1_1.pptx",
+      '',
+    file: 'http://qgailab.com/cloud/course/static/pdf/4.1_1.pdf',
+    detail: [
+      {
+        title: "循环结构程序设计（1）",
+        video: "http://qgailab.com/cloud/course/resources/video/4.1_1.mp4",
+        videoId: 127,
+        rate: 0, //观看进度
+        total: 785, //总时长
+        content: "理解三种循环结构的用法，理解不同的跳出循环的方法的区别",
+        ifFinished: false,
+      },
+      {
+        title: "循环结构程序设计（2）",
+        video: "http://qgailab.com/cloud/course/resources/video/4.2_1.mp4",
+        rate: 0, //观看进度
+        videoId: 128,
+        total: 753, //总时长
+        content: '理解三种循环结构的用法，理解不同的跳出循环的方法的区别',
+        ifFinished: false,
+      },
+      {
+        title: "循环结构嵌套和比较（1）",
+        video: "http://qgailab.com/cloud/course/resources/video/4.3_1.mp4",
+        videoId: 129,
+        rate: 0, //观看进度
+        total: 669, //总时长
+        content: '循环结构嵌套的理解和比较',
+        ifFinished: false,
+      },
+      {
+        title: "循环结构嵌套和比较（2）",
+        video: "http://qgailab.com/cloud/course/resources/video/4.4_1.mp4",
+        videoId: 130,
+        total: 486, //总时长
+        rate: 0, //观看进度
+        content: '循环结构嵌套的理解和比较',
+        ifFinished: false,
+      },
+    ],
+  },
+  {
+    title: "五、数组",
+    show: false, //是否展示详细内容
+    rate: 0, //进度
+    work:
+      // "http://qgailab.com/cloud/course/static/pdf/2.1_1.pptx",
+      '',
+    file: 'http://qgailab.com/cloud/course/static/pdf/5.1_1.pdf',
+    detail: [
+      {
+        title: "利用数组处理批量数据(1)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.1_1.mp4",
+        videoId: 131,
+        rate: 0, //观看进度
+        total: 762, //总时长
+        content: "了解一维数组二维数组定义，了解排序,使用字符数组和字符串",
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(2)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.2_1.mp4",
+        rate: 0, //观看进度
+        videoId: 132,
+        total: 782, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(3)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.3_1.mp4",
+        videoId: 133,
+        rate: 0, //观看进度
+        total: 796, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(4)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.4_1.mp4",
+        videoId: 134,
+        rate: 0, //观看进度
+        total: 746, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(5)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.5_1.mp4",
+        videoId: 135,
+        rate: 0, //观看进度
+        total: 692, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(6)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.6_1.mp4",
+        videoId: 136,
+        rate: 0, //观看进度
+        total: 750, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
+        ifFinished: false,
+      },
+      {
+        title: "利用数组处理批量数据(7)",
+        video: "http://qgailab.com/cloud/course/resources/video/5.7_1.mp4",
+        videoId: 137,
+        rate: 0, //观看进度
+        total: 276, //总时长
+        content: '了解一维数组二维数组定义，了解排序,使用字符数组和字符串',
         ifFinished: false,
       },
     ],

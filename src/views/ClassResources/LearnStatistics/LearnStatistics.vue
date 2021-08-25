@@ -23,7 +23,7 @@
           >
             <div class="title" @click="showSection(index1, index2)">
               <span>{{
-                index1 + 1 + "." + (index2 + 1) + " " + section.title
+                index1 + "." + (index2 + 1) + " " + section.title
               }}</span>
               <i
                 :style="{

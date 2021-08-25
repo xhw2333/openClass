@@ -6,7 +6,7 @@ export const studyData = videoData.map((video) => {
         detail: video.detail.map((item) => {
             return {
                 ...item,
-                ifPreview: true, //预习情况
+                ifPreview: false, //预习情况
                 ifTest: false, //小测情况 
                 show: false, //是否展开
             }

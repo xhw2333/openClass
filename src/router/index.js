@@ -10,7 +10,7 @@ import Awards from '@/views/AboutUs/Awards/Awards'
 import StudentAwards from '@/views/AboutUs/Awards/StudentAwards'
 import TeacherStyle from '@/views/AboutUs/TeacherStyle/TeacherStyle'
 import ActivitySilhouette from '@/views/AboutUs/ActivitySilhouette/ActivitySilhouette'
-// import UniversityAlliance from '@/views/AboutUs/UniversityAlliance/UniversityAlliance'
+import UniversityAlliance from '@/views/AboutUs/UniversityAlliance/UniversityAlliance'
 import Login from '@/views/Login/Login'
 import Notice from '@/views/ClassResources/Notice/Notice'
 import ClassSum from '@/views/ClassResources/ClassSum/ClassSum'
@@ -112,7 +112,7 @@ const router = new Router({
           path: 'AboutUs',
           name: 'AboutUs',
           component: AboutUs,
-          redirect: '/TeacherGroup',
+          redirect: '/UniversityAlliance',
           children: [
             {
               path: '/TeacherGroup',
@@ -144,11 +144,11 @@ const router = new Router({
               name: 'ActivitySilhouette',
               component: ActivitySilhouette
             },
-            // {
-            //   path: '/UniversityAlliance',
-            //   name: 'UniversityAlliance',
-            //   component: UniversityAlliance
-            // },
+            {
+              path: '/UniversityAlliance',
+              name: 'UniversityAlliance',
+              component: UniversityAlliance
+            },
           ]
         }
       ]

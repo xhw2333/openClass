@@ -77,7 +77,13 @@ export default {
 
     .calendar {
       flex: 1;
-      margin-left: 20px;
+      margin: 0 20px;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    .main_container {
+      flex-direction: column-reverse;
     }
   }
 }
