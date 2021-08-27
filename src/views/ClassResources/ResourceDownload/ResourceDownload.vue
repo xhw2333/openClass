@@ -76,23 +76,23 @@ export default {
       resources: [
         {
           name: "教材下载",
-          link: "http://qgailab.com/course/resources/teacher.zip",
+          link: "http://qgailab.com/cloud/course/resources/teacher.zip",
         },
         {
           name: "软件包下载",
-          link: "http://qgailab.com/course/resources/source.zip",
+          link: "http://qgailab.com/cloud/course/resources/source.zip",
         },
         {
           name: "anyviewC下载",
-          link: "http://qgailab.com/course/resources/AnyviewC.rar",
+          link: "http://qgailab.com/cloud/course/resources/AnyviewC.rar",
         },
         {
           name: "anyworkApp安装包下载",
-          link: "http://qgailab.com/course/resources/AnyWork.apk",
+          link: "http://qgailab.com/cloud/course/resources/AnyWork.apk",
         },
         {
           name: "TC下载",
-          link: "http://qgailab.com/course/resources/tc.rar",
+          link: "http://qgailab.com/cloud/course/resources/tc.rar",
         },
       ],
       //包含实验计划题目和答案地址的数组
@@ -100,44 +100,44 @@ export default {
         {
           name: "实验一",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/1.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/1.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/1.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/1.docx",
         },
         {
           name: "实验二",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/2.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/2.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/2.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/2.docx",
         },
         {
           name: "实验三",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/3.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/3.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/3.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/3.docx",
         },
         {
           name: "实验四",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/4.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/4.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/4.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/4.docx",
         },
         {
           name: "实验五",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/5.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/5.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/5.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/5.docx",
         },
         {
           name: "实验汇总",
           answer:
-            "http://qgailab.com/course/resources//practical/answer/all.docx",
+            "http://qgailab.com/cloud/course/resources//practical/answer/all.docx",
           exercise:
-            "http://qgailab.com/course/resources//practical/report/all.docx",
+            "http://qgailab.com/cloud/course/resources//practical/report/all.docx",
         },
       ],
       imgSrc: [

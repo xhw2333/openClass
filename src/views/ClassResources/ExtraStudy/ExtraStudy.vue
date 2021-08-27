@@ -49,35 +49,35 @@ export default {
       classicCase: [
         {
           name: "第二章 数据类型、运算符与表达式、简单程序设计",
-          link: "http://qgailab.com/course/resources/feature/chapter2.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter2.docx",
         },
         {
           name: "第三章 顺序程序设计",
-          link: "http://qgailab.com/course/resources/feature/chapter3.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter3.docx",
         },
         {
           name: "第四章 选择结构程序设计",
-          link: "http://qgailab.com/course/resources/feature/chapter4.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter4.docx",
         },
         {
           name: "第五章 循环控制",
-          link: "http://qgailab.com/course/resources/feature/chapter5.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter5.docx",
         },
         {
           name: "第六章 数组",
-          link: "http://qgailab.com/course/resources/feature/chapter6.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter6.docx",
         },
         {
           name: "第七章 函数",
-          link: "http://qgailab.com/course/resources/feature/chapter7.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter7.docx",
         },
         {
           name: "第九章 指针",
-          link: "http://qgailab.com/course/resources/feature/chapter9.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter9.docx",
         },
         {
           name: "第十章 结构体与共用体",
-          link: "http://qgailab.com/course/resources/feature/chapter10.docx",
+          link: "http://qgailab.com/cloud/course/resources/feature/chapter10.docx",
         },
       ],
       //专题讲座系列

@@ -7,10 +7,7 @@
           <li v-for="(item, index) in leftNav" :key="item.url">
             <router-link
               @click.native="changePanel(index)"
-              :class="[
-                'nav_item',
-                { active: index === panelIndex},
-              ]"
+              :class="['nav_item', { active: index === panelIndex }]"
               :to="item.url"
               >{{ item.name }}</router-link
             >
@@ -65,8 +62,8 @@ export default {
           // ],
         },
         {
-          name: '学习统计',
-          url: '/ClassResources/LearnStatistics'
+          name: "学习统计",
+          url: "/ClassResources/LearnStatistics",
         },
         {
           name: "资源下载",
@@ -85,14 +82,12 @@ export default {
           url: "/ClassResources/ClassAssess",
         },
       ],
-      //当前所在页
-      panelIndex: 0,
     };
   },
   methods: {
     //切换面板
     changePanel(index) {
-      this.panelIndex = index;
+      this.$store.commit("changePanel", index);
     },
     // // 切换子面板
     // changeChild(parent, child) {
@@ -107,9 +102,17 @@ export default {
     // console.log(this.$route.name);
     switch (this.$route.name) {
       case "ClassLearn":
-        this.panelIndex = 2;
+        this.$store.commit("changePanel", 2);
         break;
+      default:
+        this.$store.commit("changePanel", 0);
     }
+  },
+  computed: {
+    //当前所在页
+    panelIndex() {
+      return this.$store.state.classIndex;
+    },
   },
 };
 </script>
@@ -180,13 +183,13 @@ export default {
   }
 }
 
-@media screen and (max-width:800px){
-  #ClassResources{
+@media screen and (max-width: 800px) {
+  #ClassResources {
     .class_wrap {
       width: 98%;
 
       .left_nav {
-        >li {
+        > li {
           width: 100px;
         }
       }

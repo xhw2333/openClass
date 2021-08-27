@@ -64,7 +64,7 @@
             </li>
           </ol>
           <div class="btn_wrap">
-            <a href="http://qgailab.com/course/resources/2.docx" class="load_btn">教学大纲下载</a>
+            <a href="http://qgailab.com/cloud/course/resources/2.docx" class="load_btn">教学大纲下载</a>
           </div>
         </div>
       </TabPane>
@@ -99,7 +99,7 @@
             </li>
           </ol>
           <div class="btn_wrap">
-            <a href="http://qgailab.com/course/resources/learn.docx" class="load_btn">学习指南下载</a>
+            <a href="http://qgailab.com/cloud/course/resources/learn.docx" class="load_btn">学习指南下载</a>
           </div>
         </div>
       </TabPane>

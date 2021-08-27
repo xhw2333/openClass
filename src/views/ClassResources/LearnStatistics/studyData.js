@@ -10,6 +10,6 @@ export const studyData = videoData.map((video) => {
                 ifTest: false, //小测情况 
                 show: false, //是否展开
             }
-        })
+        }).filter((item)=>item.videoId != -1)
     }
 });

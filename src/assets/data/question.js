@@ -1,4 +1,10 @@
 export const prePro = new Map([
+    [-1, [
+        {
+            type: -1
+        },
+    ]],
+    
     [101, [
         {
             id: 1,
@@ -907,10 +913,116 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
+    // 第六章
+    [138, [
+        {
+            id: 83,
+            title: "构成C程序的基本单位是___",
+            type: 1, 
+            correct_ans: '函数',
+            user_ans: '',
+        },
+    ]],
+    [139, [
+        {
+            id: 85,
+            title: "C语言中函数返回值的类型是由___决定的 ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "函数定义时指定的类型",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "return语句中的表达式类型",
+                },
+                {
+                    numb: "C",
+                    content: "调用该函数时的实参的数据类型",
+                },
+                {
+                    numb: "D",
+                    content: "形参的数据类型",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [140, [
+        {
+            id: 87,
+            title: "以下不正确的说法是（ ）。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "在不同函数中可以使用相同名字的变量",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "形式参数是局部变量",
+                },
+                {
+                    numb: "C",
+                    content: "在函数内定义的变量只在本函数范围内有定义",
+                },
+                {
+                    numb: "D",
+                    content: "在某函数内定义的变量可在其余函数中通用",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [141, [
+        {
+            id: 89,
+            title: "用数组名作为函数调用时的实参时，传递给形参的是___。",
+            type: 1,
+            correct_ans: '数组首地址',
+            user_ans: '',
+        },
+    ]],
+    [142, [
+        {
+            id: 91,
+            title: "下列说法中正确的是：（）",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "局部变量在一定围有效，且可与该围外的变量同名。",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "如果一个源文件中，全局变量与局部变量同名，则在局部变量围，局部变量不起作用。",
+                },
+                {
+                    numb: "C",
+                    content: "局部变量缺省情况下都是静态变量。 ",
+                },
+                {
+                    numb: "D",
+                    content: "函数体的局部静态变量，在函数体外也有效",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
 ]);
 
 
 export const testPro = new Map([
+    [-1, [
+        {
+            type: -1,
+        }
+    ]],
+
     [101, [
         {
             id: 2,
@@ -2028,6 +2140,126 @@ export const testPro = new Map([
                 {
                     numb: "D",
                     content: "10",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    // 第六章
+    [138, [
+        {
+            id: 84,
+            title: "在C语言中，函数的数据类型是指( ) ",
+            type: 0, 
+            select: [
+                {
+                    numb: "A",
+                    content: "函数返回值的数据类型",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "函数形参的数据类型",
+                },
+                {
+                    numb: "C",
+                    content: "调用该函数时的实参的数据类型",
+                },
+                {
+                    numb: "D",
+                    content: "任意指定的数据类型",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [139, [
+        {
+            id: 86,
+            title: "若调用一个函数，且此函数中没有return语句，则正确的说法是（ ）。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "该函数没有返回值",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "该函数返回若干个系统默认值",
+                },
+                {
+                    numb: "C",
+                    content: "能返回一个用户所希望的函数值 ",
+                },
+                {
+                    numb: "D",
+                    content: "返回一个不确定的值",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [140, [
+        {
+            id: 88,
+            title: "以下正确的函数定义是（  ）。",
+            type: 0, 
+            select: [
+                {
+                    numb: "A",
+                    content: "double fun(int x , int y) ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "double fun(int x ; int y)",
+                },
+                {
+                    numb: "C",
+                    content: "double fun(int x , int y) ;",
+                },
+                {
+                    numb: "D",
+                    content: "double fun(int x,y)",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [141, [
+        {
+            id: 90,
+            title: "函数在做调用时，实际参数必须与形式参数一致，包括____。",
+            type: 1, 
+            correct_ans: '数量和数据类型',
+            user_ans: '',
+        },
+    ]],
+    [142, [
+        {
+            id: 92,
+            title: "在C语言中，表示静态存储类别的关键字是:",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "auto",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "register",
+                },
+                {
+                    numb: "C",
+                    content: "static",
+                },
+                {
+                    numb: "D",
+                    content: "extern",
                 },
             ],
             correct_ans: 'C',

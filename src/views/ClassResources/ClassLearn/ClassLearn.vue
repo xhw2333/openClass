@@ -8,7 +8,7 @@
         </div>
         <!-- <p>学习任务：{{ work }}</p> -->
       </div>
-      <Tabs value="name1" class="study_wrap">
+      <Tabs :value="name" class="study_wrap">
         <TabPane
           :label="
             (h) => {
@@ -37,13 +37,14 @@
               @pass="handleChild"
             />
             <FillProblem
-              v-else
+              v-else-if="pro.type == 1"
               :p_index="index"
               :status="preStatus"
               :problem="pro"
             />
+            <p v-else>暂无题目</p>
           </div>
-          <div v-show="preProblem.length" class="bottom_wrap">
+          <div v-show="preProblem.length && videoId != -1" class="bottom_wrap">
             <div class="btn_wrap">
               <Button
                 @click="preCommit"
@@ -68,7 +69,7 @@
           </div>
           <p v-show="!preProblem.length">请选择章节进行预习</p>
         </TabPane>
-        <TabPane label="章节说明" name="name2"> {{ summary }} </TabPane>
+        <TabPane label="章节说明" name="name2"><p style="text-indent: 2em;">{{ summary }}</p></TabPane>
         <TabPane
           :label="
             (h) => {
@@ -103,7 +104,7 @@
             frameborder="0"
             class="class_file"
           ></iframe>
-          <p v-show="!filesrc">请选择章节预览课件</p>
+          <p v-show="!filesrc">暂无课件</p>
         </TabPane>
         <TabPane
           :label="
@@ -132,13 +133,14 @@
               @pass="handleChild"
             />
             <FillProblem
-              v-else
+              v-else-if="pro.type === 1"
               :p_index="index"
               :status="testStatus"
               :problem="pro"
             />
+            <p v-else>暂无题目</p>
           </div>
-          <div v-show="testProblem.length" class="bottom_wrap">
+          <div v-show="testProblem.length && videoId != -1" class="bottom_wrap">
             <div class="btn_wrap">
               <Button
                 @click="testCommit"
@@ -327,27 +329,35 @@ export default {
       testProblem: [],
       // 视频id
       videoId: -1,
+      // 标签所在页
+      name: 'name1',
     };
   },
   created() {
     this.getVideoStatus();
   },
   mounted() {
-    let { title, detail, file } = this.classesList[0];
-    console.log(title, detail, file);
+    let {index = 1,section = 0, chapter = 0} = this.$route.params;
+    
+    // 如果是从学习情况过来的
+    if(Object.getOwnPropertyNames(this.$route.params).length !== 0 && chapter == 0){
+      section += 3;
+    }
+    this.name = 'name' + index;
+    let { title, detail, file } = this.classesList[chapter];
     this.filesrc = file;
-    this.videoSrc = detail[0].video;
-    this.videoStatus = detail[0].ifFinished;
-    this.subtitle = detail[0].title;
+    this.videoSrc = detail[section].video;
+    this.videoStatus = detail[section].ifFinished;
+    this.subtitle = detail[section].title;
     this.mainTitle = title;
-    this.rateId = detail[0].id;
-    this.videoRate = detail[0].rate;
-    this.videoSChapterIndex = 0;
-    this.videoChapterIndex = 0;
-    this.preProblem = prePro.get(detail[0].videoId);
-    this.testProblem = testPro.get(detail[0].videoId);
-    this.summary = detail[0].content;
-    this.videoId = detail[0].videoId;
+    this.rateId = detail[section].id;
+    this.videoRate = detail[section].rate;
+    this.videoChapterIndex = chapter; //章
+    this.videoSChapterIndex = section; //小节
+    this.preProblem = prePro.get(detail[section].videoId);
+    this.testProblem = testPro.get(detail[section].videoId);
+    this.summary = detail[section].content;
+    this.videoId = detail[section].videoId;
   },
   methods: {
     //展示收起详细内容
@@ -556,7 +566,7 @@ export default {
     //更新视频进度 id -- 进度id rate -- 进度
     updateVideo(rate) {
       //无登录时不更新视频进度
-      if (!this.rateId) return;
+      if (!this.rateId || this.videoId == -1) return;
       let data = new FormData();
       data.append("id", this.rateId);
       data.append("rate", rate);

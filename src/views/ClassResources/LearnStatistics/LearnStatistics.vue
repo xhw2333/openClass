@@ -34,16 +34,21 @@
               >
             </div>
             <ul class="detail" v-show="section.show">
-              <li class="preview">
+              <li class="preview" @click="gotoStudy(index1,index2,1)">
                 <span>预习情况</span>
                 <span v-if="section.ifPreview" class="finished">已完成</span>
                 <span v-else class="unfinished">未完成</span>
               </li>
-              <li class="video">
+              <li class="video" @click="gotoStudy(index1,index2,3)">
                 <span>视频预习</span>
-                <span>已学习<i style="font-style:normal;font-weight:600;">{{ section.rate }}</i>分钟</span>
+                <span
+                  >已学习<i style="font-style: normal; font-weight: 600">{{
+                    section.rate
+                  }}</i
+                  >分钟</span
+                >
               </li>
-              <li class="test">
+              <li class="test" @click="gotoStudy(index1,index2,5)">
                 <span>课后小测</span>
                 <span v-if="section.ifTest" class="finished">已完成</span>
                 <span v-else class="unfinished">未完成</span>
@@ -126,34 +131,36 @@ export default {
         content: "Loading...",
         duration: 0,
       });
-      this.$http.post(this.domain + "/rate/sr", data).then((res) => {
-        console.log(res);
+      this.$http
+        .post(this.domain + "/rate/sr", data)
+        .then((res) => {
+          console.log(res);
 
-        let { code, data } = res.data;
-        if (code !== 1) return this.$Message.error("获取学习情况失败");
-        this.$Message.success("获取学习情况成功");
-        //渲染每个视频的进度
-        data.forEach((item, index) => {
-          for (let i = 0; i < this.studyData.length; i++) {
-            let len = this.studyData[i].detail.length;
-            for (let j = 0; j < len; j++) {
-              // console.log()
-              if (this.studyData[i].detail[j].videoId == item.videoId) {
-                //进度id
-                this.studyData[i].detail[j].id = item.id;
-                // 预习情况
-                this.studyData[i].detail[j].ifPreview = item.preview
-                //小测情况
-                this.studyData[i].detail[j].ifTest = item.review;
-                //视频进度
-                this.studyData[i].detail[j].rate = this.formMatter(item.rate);
-                break;
+          let { code, data } = res.data;
+          if (code !== 1) return this.$Message.error("获取学习情况失败");
+          this.$Message.success("获取学习情况成功");
+          //渲染每个视频的进度
+          data.forEach((item, index) => {
+            for (let i = 0; i < this.studyData.length; i++) {
+              let len = this.studyData[i].detail.length;
+              for (let j = 0; j < len; j++) {
+                // console.log()
+                if (this.studyData[i].detail[j].videoId == item.videoId) {
+                  //进度id
+                  this.studyData[i].detail[j].id = item.id;
+                  // 预习情况
+                  this.studyData[i].detail[j].ifPreview = item.preview;
+                  //小测情况
+                  this.studyData[i].detail[j].ifTest = item.review;
+                  //视频进度
+                  this.studyData[i].detail[j].rate = this.formMatter(item.rate);
+                  break;
+                }
               }
             }
-          }
-        });
-
-      }).catch((err) => {
+          });
+        })
+        .catch((err) => {
           console.log(err);
           if (!window.sessionStorage.getItem("userId")) {
             this.$Message.info("登录获取学习情况");
@@ -165,17 +172,29 @@ export default {
     },
 
     // 转换格式
-    formMatter(rate){
+    formMatter(rate) {
       let now;
-      now = ' ' + parseInt(rate/60) + ':' + (rate%60) + ' ';
+      now = " " + parseInt(rate / 60) + ":" + (rate % 60) + " ";
       return now;
-    }
+    },
 
+    //去课程学习详细页面
+    gotoStudy(chapter,section,index) {
+      this.$store.commit("changePanel", 2);
+      this.$router.push({
+        name: "ClassLearn",
+        params: {
+          index,
+          chapter,
+          section,
+        }
+      });
+    },
   },
 
-  created(){
+  created() {
     this.getStudyData();
-  }
+  },
 };
 </script>
 
@@ -228,6 +247,7 @@ export default {
             font-size: 14px;
             padding: 5px 25px;
             transition: all 0.2s;
+            cursor: pointer;
 
             > span {
               &.finished {
