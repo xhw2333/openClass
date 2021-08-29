@@ -8,33 +8,6 @@ export let videoData = [
     file: 'http://qgailab.com/cloud/course/static/pdf/0.1_1.pdf', //课件地址
     detail:[
       {
-        title: "测试平台使用教程",
-        video: "http://qgailab.com/cloud/course/resources/video/anywork学生端.mp4",
-        videoId: -1,
-        total: 204, //总时长
-        rate: 0, //观看进度
-        content: '本节介绍的是在线测试平台的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
-        ifFinished: false, //是否看完
-      },
-      {
-        title: "测试平台app使用教程",
-        video: "http://qgailab.com/cloud/course/resources/video/anywork_app.mp4",
-        videoId: -1,
-        total: 233, //总时长
-        rate: 0, //观看进度
-        content: '本节介绍的是测试平台app的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
-        ifFinished: false, //是否看完
-      },
-      {
-        title: "anyview_C使用教程",
-        video: "http://qgailab.com/cloud/course/resources/video/anyview_C.mp4",
-        videoId: -1,
-        total: 305, //总时长
-        rate: 0, //观看进度
-        content: '本节介绍的是anyview_C的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
-        ifFinished: false, //是否看完
-      },
-      {
         title: "C语言的历史",
         video: "http://qgailab.com/cloud/course/resources/video/0.1_1.mp4",
         videoId: 125,
@@ -52,6 +25,33 @@ export let videoData = [
         content: '为使计算机按预定要求工作，首先要编制程序。程序是一个特定的指令序列，它告诉计算机要做哪些事，按什么步骤去做。指令是一组二进制信息的代码，用来表示计算机所能完成的基本操作。',
         ifFinished: false, //是否看完
       },
+      {
+        title: "程序设计掌上移动自主学习平台（AnyWork网页版）使用教程",
+        video: "http://qgailab.com/cloud/course/resources/video/anywork学生端.mp4",
+        videoId: -1,
+        total: 204, //总时长
+        rate: 0, //观看进度
+        content: '本节介绍的是在线测试平台的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
+        ifFinished: false, //是否看完
+      },
+      {
+        title: "程序设计掌上移动自主学习平台（AnyWork移动版）使用教程",
+        video: "http://qgailab.com/cloud/course/resources/video/anywork_app.mp4",
+        videoId: -1,
+        total: 233, //总时长
+        rate: 0, //观看进度
+        content: '本节介绍的是测试平台app的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
+        ifFinished: false, //是否看完
+      },
+      {
+        title: "远程在线程序设计实验系统（AnyViewC）使用教程",
+        video: "http://qgailab.com/cloud/course/resources/video/anyview_C.mp4",
+        videoId: -1,
+        total: 305, //总时长
+        rate: 0, //观看进度
+        content: '本节介绍的是anyview_C的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
+        ifFinished: false, //是否看完
+      },
     ],
   },
   {
@@ -65,7 +65,7 @@ export let videoData = [
     detail: [
       {
         title: "算法",
-        video: "http://qgailab.com/cloud/course/resources/video/1.5_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.1_1.mp4",
         videoId: 101,
         total: 769, //总时长
         rate: 0, //观看进度
@@ -74,7 +74,7 @@ export let videoData = [
       },
       {
         title: "算法特性",
-        video: "http://qgailab.com/cloud/course/resources/video/1.7_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.2_1.mp4",
         rate: 0, //观看进度
         videoId: 102,
         total: 269, //总时长
@@ -83,7 +83,7 @@ export let videoData = [
       },
       {
         title: "传统流程图表示算法",
-        video: "http://qgailab.com/cloud/course/resources/video/1.4_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.3_1.mp4",
         videoId: 103,
         rate: 0, //观看进度
         total: 415, //总时长
@@ -92,7 +92,7 @@ export let videoData = [
       },
       {
         title: "三种基本结构",
-        video: "http://qgailab.com/cloud/course/resources/video/1.1_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.4_1.mp4",
         videoId: 104,
         rate: 0, //观看进度
         total: 668, //总时长
@@ -101,7 +101,7 @@ export let videoData = [
       },
       {
         title: "用计算机语言表示算法",
-        video: "http://qgailab.com/cloud/course/resources/video/1.6_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.5_1.mp4",
         videoId: 105,
         total: 108, //总时长
         content: '我们用传统流程图，NS流程图，伪代码 表示了算法，但是这些计算机都不能识别。需要我们将这些表示思路的流程图具体编写为按照C语言语法编写的C语言代码。',
@@ -109,7 +109,7 @@ export let videoData = [
       },
       {
         title: "结构化程序设计方法",
-        video: "http://qgailab.com/cloud/course/resources/video/1.3_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.6_1.mp4",
         videoId: 106,
         rate: 0, //观看进度
         total: 176, //总时长
@@ -118,7 +118,7 @@ export let videoData = [
       },
       {
         title: "程序设计构成",
-        video: "http://qgailab.com/cloud/course/resources/video/1.2_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/1.7_1.mp4",
         videoId: 107,
         rate: 0, //观看进度
         total: 102, //总时长
@@ -140,7 +140,7 @@ export let videoData = [
         //id:-1
         title: "常量",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.10_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.1_1.mp4",
         videoId: 108,
         total: 731, //总时长
         content: '常量是固定值，在程序执行期间不会改变。这些固定的值，又叫做字面量。常量可以是任何的基本数据类型，比如整数常量、浮点常量、字符常量，或字符串字面值，也有枚举常量。常量就像是常规的变量，只不过常量的值在定义后不能进行修改。',
@@ -149,7 +149,7 @@ export let videoData = [
       {
         title: "变量",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.7_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.2_1.mp4",
         videoId: 109,
         total: 464, //总时长
         content: '变量来源于数学，是计算机语言中能储存计算结果或能表示值的抽象概念。变量可以通过变量名访问。在指令式语言中，变量通常是可变的；但在纯函数式语言（如Haskell）中，变量可能是不可变的。',
@@ -158,16 +158,16 @@ export let videoData = [
       {
         title: "数据类型",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.8_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.3_1.mp4",
         videoId: 110,
-        total: 180, //总时长
+        total: 132, //总时长
         content: '数据类型在数据结构中的定义是一个值的集合以及定义在这个值集上的一组操作。数据类型包括原始类型、多元组、记录单元、代数数据类型、抽象数据类型、参考类型以及函数类型。',
         ifFinished: false,
       },
       {
         title: "整型类型数据（1）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.11_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.4_1.mp4",
         videoId: 111,
         total: 867, //总时长
         content: '程序中使用的各种变量都应预先加以说明，即先说明，后使用。对变量的说明可以包括三个方面：·数据类型·存储类型·作用域。所谓数据类型是按被说明量的性质，表示形式，占据存储空间的多少，构造特点来划分的。',
@@ -176,7 +176,7 @@ export let videoData = [
       {
         title: "整型类型数据（2）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.3_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.5_1.mp4",
         content: '在Ｃ语言中，数据类型可分为：基本数据类型、构造数据类型、指针类型、空类型。基本数据类型：其值不可以再分解为其他类型。构造数据类型：包括数组类型、结构体类型、共用体类型。',
         videoId: 112,
         total: 739, //总时长
@@ -185,7 +185,7 @@ export let videoData = [
       {
         title: "运算符（1）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.9_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.6_1.mp4",
         videoId: 113,
         content: '运算符是一种告诉编译器执行特定的数学或逻辑操作的符号,C 语言内置了丰富的运算符，运算符（operator）是可以对数据进行相应操作的符号。',
         total: 801, //总时长
@@ -194,7 +194,7 @@ export let videoData = [
       {
         title: "运算符（2）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.12_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.7_1.mp4",
         videoId: 114,
         content: 'C语言运算符号指的是运算符号。C语言中的符号分为10类：算术运算符、关系运算符、逻辑运算符、位操作运算符、赋值运算符、条件运算符、逗号运算符、指针运算符、求字节数运算符和特殊运算符。',
         total: 361, //总时长
@@ -203,7 +203,7 @@ export let videoData = [
       {
         title: "表达式",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.6_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.8_1.mp4",
         videoId: 115,
         total: 693, //总时长
         content: '表达式是由一系列运算符（operators）和操作数（operands）组成的。这既是表达式的定义，同时也指明了表达式的组成成分。运算符指明了要进行何种运算和操作，而操作数则是运算符操作的对象。',
@@ -212,7 +212,7 @@ export let videoData = [
       {
         title: "C语句（1）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.1_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.9_1.mp4",
         videoId: 116,
         total: 606, //总时长
         content: 'C程序的执行部分是由语句组成的。 程序的功能也是由执行语句实现的。C语句可分为以下五类：表达式语句、标签语句、循环语句、复合语句、跳转语句、选择语句',
@@ -221,7 +221,7 @@ export let videoData = [
       {
         title: "C语句（2）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.4_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.10_1.mp4",
         videoId: 117,
         total: 583, //总时长
         content: 'C语言的语句用来向计算机系统发出操作指令，一个语句经编译后产生若干条机器指令，C语句可分为以下五类：表达式语句、标签语句、循环语句、复合语句、跳转语句、选择语句',
@@ -230,7 +230,7 @@ export let videoData = [
       {
         title: "数据的输入输出（1）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.2_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.11_1.mp4",
         videoId: 118,
         total: 637, //总时长
         content: 'C语言中没有提供对数据的输入语句。但提供了一些可完成数据输入的标准函数，按照指定的格式来解析常见的数据类型，基本输入函数为：getchar()、scanf() 。',
@@ -239,7 +239,7 @@ export let videoData = [
       {
         title: "数据的输入输出（2）",
         rate: 0, //观看进度
-        video: "http://qgailab.com/cloud/course/resources/video/2.5_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/2.12_1.mp4",
         videoId: 119,
         total: 584, //总时长
         content: '数据输入与输出C语言中没有提供对数据的输出语句。但提供了一些可完成数据输出的标准函数，按照指定的格式来解析常见的数据类型，基本输出函数为：putchar()、printf()概念的了解与掌握',
@@ -258,7 +258,7 @@ export let videoData = [
     detail: [
       {
         title: "三种if语句",
-        video: "http://qgailab.com/cloud/course/resources/video/3.3_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/3.1_1.mp4",
         videoId: 120,
         rate: 0, //观看进度
         total: 795, //总时长
@@ -275,7 +275,7 @@ export let videoData = [
       },
       {
         title: "逻辑运算符与逻辑表达式",
-        video: "http://qgailab.com/cloud/course/resources/video/3.4_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/3.3_1.mp4",
         videoId: 122,
         rate: 0, //观看进度
         total: 874, //总时长
@@ -284,7 +284,7 @@ export let videoData = [
       },
       {
         title: "条件运算符与条件表达式",
-        video: "http://qgailab.com/cloud/course/resources/video/3.5_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/3.4_1.mp4",
         videoId: 123,
         total: 495, //总时长
         rate: 0, //观看进度
@@ -293,7 +293,7 @@ export let videoData = [
       },
       {
         title: "switch多分支选择结构",
-        video: "http://qgailab.com/cloud/course/resources/video/3.1_1.mp4",
+        video: "http://qgailab.com/cloud/course/resources/video/3.5_1.mp4",
         videoId: 124,
         total: 464, //总时长
         rate: 0, //观看进度
@@ -317,7 +317,7 @@ export let videoData = [
         videoId: 127,
         rate: 0, //观看进度
         total: 785, //总时长
-        content: "﻿while 表达式是顶部驱动（top-driven）的循环：先计算循环条件（也就是控制表达式）。如果为 true，就执行循环体，然后再次计算控制表达式。如果控制表达式为 false，程序跳过循环体，而去执行循环体后面的语句。",
+        content: "while 表达式是顶部驱动（top-driven）的循环：先计算循环条件（也就是控制表达式）。如果为 true，就执行循环体，然后再次计算控制表达式。如果控制表达式为 false，程序跳过循环体，而去执行循环体后面的语句。",
         ifFinished: false,
       },
       {
@@ -372,7 +372,7 @@ export let videoData = [
         video: "http://qgailab.com/cloud/course/resources/video/5.2_1.mp4",
         rate: 0, //观看进度
         videoId: 132,
-        total: 782, //总时长
+        total: 423, //总时长
         content: '本节主要介绍一维数组的初始化，一共有4种初始化的方式。同时将通过实例展示如何使用数组来处理Fibonacci数列问题。',
         ifFinished: false,
       },
@@ -381,43 +381,52 @@ export let videoData = [
         video: "http://qgailab.com/cloud/course/resources/video/5.3_1.mp4",
         videoId: 133,
         rate: 0, //观看进度
-        total: 796, //总时长
+        total: 729, //总时长
         content: '排序是数据处理的重要过程，本节主要讲述经典的冒泡排序，其关键思想是重复跑过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小）那么它就会按照大到小的排序方式来。它必须要把算所有的元素重复地进行跑一遍，直到没有相邻元素需要交换。',
         ifFinished: false,
       },
       {
-        title: "二维数组",
+        title: "二维数组(1)",
         video: "http://qgailab.com/cloud/course/resources/video/5.4_1.mp4",
         videoId: 134,
         rate: 0, //观看进度
-        total: 746, //总时长
+        total: 840, //总时长
         content: '之前讲解的数组可以看作是一行连续的数据，只有一个下标，称为一维数组。在实际问题中有很多数据是二维的或多维的，因此C语言允许构造多维数组。多维数组元素有多个下标，以确定它在数组中的位置',
         ifFinished: false,
       },
       {
-        title: "字符数组（1）",
+        title: "二维数组(2)",
         video: "http://qgailab.com/cloud/course/resources/video/5.5_1.mp4",
         videoId: 135,
         rate: 0, //观看进度
-        total: 692, //总时长
+        total: 234, //总时长
+        content: '本节主要讲的是二维数组的定义、初始化和引用，相较于一维数组，他类似一个矩阵，需要行、列坐标定位他的位置。他还有更多的奥秘值得我们去探索，让我们一起进入章节学习吧',
+        ifFinished: false,
+      },
+      {
+        title: "字符数组（1）",
+        video: "http://qgailab.com/cloud/course/resources/video/5.6_1.mp4",
+        videoId: 136,
+        rate: 0, //观看进度
+        total: 505, //总时长
         content: '字符串是由多个字符组成的序列，想要存储一个字符串，可以先把它拆成一个个字符，然后分别对这些字符进行存储，即通过字符数组存储。字符数组是一个数组，且是存储字符的数组，该数组中一个元素存放字符串的一个字符。',
         ifFinished: false,
       },
       {
         title: "字符数组（2）",
-        video: "http://qgailab.com/cloud/course/resources/video/5.6_1.mp4",
-        videoId: 136,
+        video: "http://qgailab.com/cloud/course/resources/video/5.7_1.mp4",
+        videoId: 137,
         rate: 0, //观看进度
-        total: 750, //总时长
+        total: 512, //总时长
         content: '本节主要介绍字符数组的初始化，如何引用字符数组中的元素，字符数组的输入输出等等，让我们一起深入学习，一起来领悟字符数组的奥秘吧',
         ifFinished: false,
       },
       {
         title: "字符串处理函数",
-        video: "http://qgailab.com/cloud/course/resources/video/5.7_1.mp4",
-        videoId: 137,
+        video: "http://qgailab.com/cloud/course/resources/video/5.8_1.mp4",
+        videoId: 138,
         rate: 0, //观看进度
-        total: 276, //总时长
+        total: 800, //总时长
         content: 'C标准库中头文件<string.h>定义了两组字符串函数，第一组函数的名字以str开头，它主要处理以’\0‘结尾的字符串；第二组函数的名字以mem开头，主要考虑非字符串内部含有零值的情形，它能够处理任意的字节序列',
         ifFinished: false,
       },
@@ -435,7 +444,7 @@ export let videoData = [
       {
         title: "函数",
         video: "http://qgailab.com/cloud/course/resources/video/6.1_1.mp4",
-        videoId: 138,
+        videoId: 139,
         rate: 0, //观看进度
         total: 859, //总时长
         content: "函数是一段可以重复使用的代码，用来独立地完成某个功能，它可以接收用户传递的数据，也可以不接收。接收用户数据的函数在定义时要指明参数，不接收用户数据的不需要指明，根据这一点可以将函数分为有参函数和无参函数。",
@@ -445,7 +454,7 @@ export let videoData = [
         title: "函数的返回值",
         video: "http://qgailab.com/cloud/course/resources/video/6.2_1.mp4",
         rate: 0, //观看进度
-        videoId: 139,
+        videoId: 140,
         total: 271, //总时长
         content: '函数的函数名是该函数的代表，也是一个变量。由于函数名变量通常用来把函数的处理结果数据返回给调用函数，即递归调用，所以一般把函数名变量称为返回值，函数的返回值类型是在定义函数时指定的。',
         ifFinished: false,
@@ -453,7 +462,7 @@ export let videoData = [
       {
         title: "函数声明",
         video: "http://qgailab.com/cloud/course/resources/video/6.3_1.mp4",
-        videoId: 140,
+        videoId: 141,
         rate: 0, //观看进度
         total: 333, //总时长
         content: '“函数定义”是指对函数功能的确立，包括指定函数名，函数值类型、形参类型、函数体等。“函数声明”的作用则是把函数的名字、函数类型以及形参类型、个数和顺序通知编译系统，以便在调用该函数时系统按此进行对照检查。',
@@ -462,7 +471,7 @@ export let videoData = [
       {
         title: "函数的形参和实参",
         video: "http://qgailab.com/cloud/course/resources/video/6.4_1.mp4",
-        videoId: 141,
+        videoId: 142,
         rate: 0, //观看进度
         total: 418, //总时长
         content: '在函数定义中，形参在整个函数体内都可以使用，离开该函数则不能使用。实参出现在主调函数中，进入被调函数后，实参变量也不能使用。数据传送是形参和实参的主要功能。在发生函数调用时，主调函数把实参的值传送给被调函数的形参从而实现主调函数向被调函数的数据传送。',
@@ -471,7 +480,7 @@ export let videoData = [
       {
         title: "函数嵌套调用",
         video: "http://qgailab.com/cloud/course/resources/video/6.5_1.mp4",
-        videoId: 142,
+        videoId: 143,
         rate: 0, //观看进度
         total: 534, //总时长
         content: 'C语言中函数的定义都是相互平行、相互独立的，在函数定义时，函数体内不能包含另一个函数的定义，即函数不能嵌套定义，但可以嵌套调用。嵌套调用就是某个函数调用另外一个函数（即函数嵌套允许在一个函数中调用另外一个函数）',

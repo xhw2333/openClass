@@ -574,7 +574,7 @@ export const prePro = new Map([
     ]],
     [122, [
         {
-            id: 47,
+            id: 48,
             title: "下列表达式中能表示a 在0 到100 之间的是",
             type: 0, select: [
                 {
@@ -601,7 +601,7 @@ export const prePro = new Map([
     ]],
     [123, [
         {
-            id: 50,
+            id: 51,
             title: "运算符优先级正确的是",
             type: 0, select: [
                 {
@@ -628,7 +628,7 @@ export const prePro = new Map([
     ]],
     [124, [
         {
-            id: 53,
+            id: 54,
             title: "C语言的 switch 语句中，case 后",
             type: 0, select: [
                 {
@@ -656,7 +656,7 @@ export const prePro = new Map([
     // 绪论
     [125, [
         {
-            id: 55,
+            id: 56,
             title: "C语言程序是由___构成的",
             type: 1, 
             correct_ans: '函数',
@@ -665,7 +665,7 @@ export const prePro = new Map([
     ]],
     [126, [
         {
-            id: 57,
+            id: 58,
             title: "下列说法中正确的是",
             type: 0, select: [
                 {
@@ -693,14 +693,14 @@ export const prePro = new Map([
     // 第四章
     [127, [
         {
-            id: 59,
+            id: 60,
             title: "break语句只能出现在___语句中",
             type: 1, 
             correct_ans: 'switch、for、while',
             user_ans: '',
         },
         {
-            id: 60,
+            id: 61,
             title: "continue语句的作用是___",
             type: 1, 
             correct_ans: '结束本次循环',
@@ -709,7 +709,7 @@ export const prePro = new Map([
     ]],
     [128, [
         {
-            id: 62,
+            id: 63,
             title: "执行语句{for(j=0;j<=3;j++) a=1;}后变量j的值是",
             type: 0, select: [
                 {
@@ -736,7 +736,7 @@ export const prePro = new Map([
     ]],
     [129, [
         {
-            id: 64,
+            id: 65,
             title: "do-while的循环体至少执行___次",
             type: 1, 
             correct_ans: '1',
@@ -745,7 +745,7 @@ export const prePro = new Map([
     ]],
     [130, [
         {
-            id: 66,
+            id: 67,
             title: "语句while（！y）；中的表达式！y等价于",
             type: 0, select: [
                 {
@@ -770,17 +770,17 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    // 第五章 68开始
+    // 第五章 69开始
     [131, [
         {
-            id: 68,
+            id: 69,
             title: "访问数组a的元素时，下标x的取值范围为___ ",
             type: 1, 
             correct_ans: '[0,a.length)',
             user_ans: '',
         },
         {
-            id: 69,
+            id: 70,
             title: "数组内存是___的。",
             type: 1, 
             correct_ans: '连续',
@@ -789,7 +789,7 @@ export const prePro = new Map([
     ]],
     [132, [
         {
-            id: 71,
+            id: 72,
             title: "以下能对一维数组a进行初始化的语句是",
             type: 0, select: [
                 {
@@ -816,43 +816,27 @@ export const prePro = new Map([
     ]],
     [133, [
         {
-            id: 73,
+            id: 74,
             title: "若有说明：int a[][3]={{1,2,3},{4,5},{6,7}}; 则数组a的第一维的大小为___",
             type: 1, 
             correct_ans: '3',
             user_ans: '',
         },
     ]],
-    [134, [
-        {
-            id: 75,
-            title: "以下对一维数组a的正确说明是",
-            type: 0, select: [
-                {
-                    numb: "A",
-                    content: "char a（10）",
-                },
-                {
-                    numb: "B",
-                    content:
-                        "int a[]； ",
-                },
-                {
-                    numb: "C",
-                    content: "int k＝5，a[k]；",
-                },
-                {
-                    numb: "D",
-                    content: "char  a[3]={‘a’,’b’,’c’};",
-                },
-            ],
-            correct_ans: 'D',
-            user_ans: '',
-        },
-    ]],
+    [
+        134,[
+            {
+                id: 76,
+                title: "在执行语句：int a[ ][3]={1,2,3,4,5,6}; 后，a[1][0]的值是",
+                type: 1, 
+                correct_ans: '4',
+                user_ans: '',
+            },
+        ]
+    ],
     [135, [
         {
-            id: 77,
+            id: 78,
             title: "对二维数组的正确定义是（）",
             type: 0, select: [
                 {
@@ -879,16 +863,43 @@ export const prePro = new Map([
     ]],
     [136, [
         {
-            id: 79,
+            id: 80,
+            title: "以下对一维数组a的正确说明是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "char a（10）",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int a[]； ",
+                },
+                {
+                    numb: "C",
+                    content: "int k＝5，a[k]；",
+                },
+                {
+                    numb: "D",
+                    content: "char  a[3]={‘a’,’b’,’c’};",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [137, [
+        {
+            id: 82,
             title: "在数组中，数组名表示___",
             type: 1,
             correct_ans: '数组第1个元素的首地址',
             user_ans: '',
         },
     ]],
-    [137, [
+    [138, [
         {
-            id: 81,
+            id: 84,
             title: "以下4个字符串函数中，（）所在的头文件与其他3个不同。",
             type: 0, select: [
                 {
@@ -914,18 +925,18 @@ export const prePro = new Map([
         },
     ]],
     // 第六章
-    [138, [
+    [139, [
         {
-            id: 83,
+            id: 86,
             title: "构成C程序的基本单位是___",
             type: 1, 
             correct_ans: '函数',
             user_ans: '',
         },
     ]],
-    [139, [
+    [140, [
         {
-            id: 85,
+            id: 88,
             title: "C语言中函数返回值的类型是由___决定的 ",
             type: 0, select: [
                 {
@@ -950,9 +961,9 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [140, [
+    [141, [
         {
-            id: 87,
+            id: 90,
             title: "以下不正确的说法是（ ）。",
             type: 0, select: [
                 {
@@ -977,18 +988,18 @@ export const prePro = new Map([
             user_ans: '',
         },
     ]],
-    [141, [
+    [142, [
         {
-            id: 89,
+            id: 92,
             title: "用数组名作为函数调用时的实参时，传递给形参的是___。",
             type: 1,
             correct_ans: '数组首地址',
             user_ans: '',
         },
     ]],
-    [142, [
+    [143, [
         {
-            id: 91,
+            id: 94,
             title: "下列说法中正确的是：（）",
             type: 0, select: [
                 {
@@ -1717,7 +1728,7 @@ export const testPro = new Map([
     ]],
     [122, [
         {
-            id: 48,
+            id: 49,
             title: "设有定义：int a=3,b=4,c=5;则语句printf(“%d\n”,a+b>c&&b==c);的输出结果是",
             type: 0, select: [
                 {
@@ -1742,7 +1753,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
-            id: 49,
+            id: 50,
             title: "若希望当A的值为奇数时，表达式的值为“真”，A的值为偶数时，表达式的值为“假”，则以下不能满足要求的表达式是",
             type: 0, select: [
                 {
@@ -1769,7 +1780,7 @@ export const testPro = new Map([
     ]],
     [123, [
         {
-            id: 51,
+            id: 52,
             title: "若执行以下程序时从键盘上输入9，则输出结果是__ main(){ int n;scanf(\"%d\",&n);if(n++<10) printf(\"%d\\n\",n);else printf(\"%d\\n\",n--);}",
             type: 0, select: [
                 {
@@ -1794,7 +1805,7 @@ export const testPro = new Map([
             user_ans: '',
         },
         {
-            id: 52,
+            id: 53,
             title: "已知int x=10,y=20,z=30;以下语句执行后x，y，z的值是__ if(x>y) z=x; x=y; y=z; ",
             type: 0, select: [
                 {
@@ -1821,7 +1832,7 @@ export const testPro = new Map([
     ]],
     [124, [
         {
-            id: 54,
+            id: 55,
             title: "以下程序输入3输出结果为__int main(){ int k;scanf(“%d”,&k);switch(k){  case 1:printf(“%d”,k++);case 2:printf(“%d”,k++);case 3:printf(“%d”,k++);case 4:printf(“%d”,k++); break; default :printf(“FULL!”); }printf(“\\n”); }",
             type: 0, select: [
                 {
@@ -1849,7 +1860,7 @@ export const testPro = new Map([
     // 绪论
     [125, [
         {
-            id: 56,
+            id: 57,
             title: "下列说法错误的是",
             type: 0, select: [
                 {
@@ -1876,7 +1887,7 @@ export const testPro = new Map([
     ]],
     [126, [
         {
-            id: 58,
+            id: 59,
             title: "系统默认的C语言源程序扩展名为.C,需经过___之后,生成.exe文件。",
             type: 1, 
             correct_ans: '编译、连接',
@@ -1886,7 +1897,7 @@ export const testPro = new Map([
     // 第四章
     [127, [
         {
-            id: 61,
+            id: 62,
             title: "在C语言中，下列说法中正确的是",
             type: 0, select: [
                 {
@@ -1913,7 +1924,7 @@ export const testPro = new Map([
     ]],
     [128, [
         {
-            id: 63,
+            id: 64,
             title: "以下程序段 ( ) x=-1; do { x=x*x; } while(x>0); ",
             type: 0, select: [
                 {
@@ -1940,7 +1951,7 @@ export const testPro = new Map([
     ]],
     [129, [
         {
-            id: 65,
+            id: 66,
             title: "下面有关for循环的正确描述是",
             type: 0, select: [
                 {
@@ -1967,7 +1978,7 @@ export const testPro = new Map([
     ]],
     [130, [
         {
-            id: 67,
+            id: 68,
             title: "对以下程序段的叙述正确___. int x=1; do  { x= -1*x; } while(!x)",
             type: 0, select: [
                 {
@@ -1995,7 +2006,7 @@ export const testPro = new Map([
     // 第五章
     [131, [
         {
-            id: 70,
+            id: 71,
             title: "已知：int  a[10]; 则对a数组元素的正确引用是（）。",
             type: 0, select: [
                 {
@@ -2022,7 +2033,7 @@ export const testPro = new Map([
     ]],
     [132, [
         {
-            id: 72,
+            id: 73,
             title: "假定int类型变量占用两个字节，其有定义：int  x[10]={0,2,4};，则数组x在存中所占字节数是___",
             type: 1, 
             correct_ans: '20',
@@ -2031,7 +2042,7 @@ export const testPro = new Map([
     ]],
     [133, [
         {
-            id: 74,
+            id: 75,
             title: "若有以下数组说明，int a[12]={1,4,7,10,2,5,8,11,3,6,9,12};则i=10;a[a[i]]元素数值是___。",
             type: 1, 
             correct_ans: '9',
@@ -2040,34 +2051,16 @@ export const testPro = new Map([
     ]],
     [134, [
         {
-            id: 76,
-            title: "在C语言中对一维整型数组的正确定义为",
-            type: 0, select: [
-                {
-                    numb: "A",
-                    content: "int a(10);  ",
-                },
-                {
-                    numb: "B",
-                    content:
-                        "int n=10,a[n]; ",
-                },
-                {
-                    numb: "C",
-                    content: "int  n;a[n];",
-                },
-                {
-                    numb: "D",
-                    content: "#define N 10   int a[N];",
-                },
-            ],
-            correct_ans: 'D',
+            id: 77,
+            title: "在定义int a[5][6];后，数组a中的第10个元素是________。（设a[0][0]为第一个元素",
+            type: 1, 
+            correct_ans: 'a[1][3]',
             user_ans: '',
         },
     ]],
     [135, [
         {
-            id: 78,
+            id: 79,
             title: "已知int a[3][4];则对数组元素引用正确的是",
             type: 0, select: [
                 {
@@ -2094,7 +2087,34 @@ export const testPro = new Map([
     ]],
     [136, [
         {
-            id: 80,
+            id: 81,
+            title: "在C语言中对一维整型数组的正确定义为",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "int a(10);",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "int n=10,a[n];",
+                },
+                {
+                    numb: "C",
+                    content: "int n;a[n];",
+                },
+                {
+                    numb: "D",
+                    content: "#define N 10  int a[N]; ",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [137, [
+        {
+            id: 83,
             title: "下面程序段的输出结果是: ( C  ) int i;  int x[3][3]={1,2,3,4,5,6,7,8,9};  for (i=0;i<3;i++)  printf(\"%d \",x[i][2-i]); ",
             type: 0, select: [
                 {
@@ -2119,9 +2139,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [137, [
+    [138, [
         {
-            id: 82,
+            id: 85,
             title: "执行下面的程序段后,变量k中的值为（）。int  k=3, s[2]; s[0]=k;  k=s[0]*10;  ",
             type: 0, select: [
                 {
@@ -2147,9 +2167,9 @@ export const testPro = new Map([
         },
     ]],
     // 第六章
-    [138, [
+    [139, [
         {
-            id: 84,
+            id: 87,
             title: "在C语言中，函数的数据类型是指( ) ",
             type: 0, 
             select: [
@@ -2175,9 +2195,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [139, [
+    [140, [
         {
-            id: 86,
+            id: 89,
             title: "若调用一个函数，且此函数中没有return语句，则正确的说法是（ ）。",
             type: 0, select: [
                 {
@@ -2202,9 +2222,9 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [140, [
+    [141, [
         {
-            id: 88,
+            id: 91,
             title: "以下正确的函数定义是（  ）。",
             type: 0, 
             select: [
@@ -2230,18 +2250,18 @@ export const testPro = new Map([
             user_ans: '',
         },
     ]],
-    [141, [
+    [142, [
         {
-            id: 90,
+            id: 93,
             title: "函数在做调用时，实际参数必须与形式参数一致，包括____。",
             type: 1, 
             correct_ans: '数量和数据类型',
             user_ans: '',
         },
     ]],
-    [142, [
+    [143, [
         {
-            id: 92,
+            id: 95,
             title: "在C语言中，表示静态存储类别的关键字是:",
             type: 0, select: [
                 {

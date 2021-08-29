@@ -340,9 +340,9 @@ export default {
     let {index = 1,section = 0, chapter = 0} = this.$route.params;
     
     // 如果是从学习情况过来的
-    if(Object.getOwnPropertyNames(this.$route.params).length !== 0 && chapter == 0){
-      section += 3;
-    }
+    // if(Object.getOwnPropertyNames(this.$route.params).length !== 0 && chapter == 0){
+    //   section += 3;
+    // }
     this.name = 'name' + index;
     let { title, detail, file } = this.classesList[chapter];
     this.filesrc = file;
