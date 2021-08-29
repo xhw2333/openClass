@@ -439,7 +439,7 @@ export let videoData = [
     work:
       // "http://qgailab.com/cloud/course/static/pdf/6.1_1.pptx",
       '',
-    file: '',
+    file: 'http://qgailab.com/cloud/course/static/pdf/6.1_1.pdf',
     detail: [
       {
         title: "函数",
