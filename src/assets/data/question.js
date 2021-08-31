@@ -4,7 +4,7 @@ export const prePro = new Map([
             type: -1
         },
     ]],
-    
+
     [101, [
         {
             id: 1,
@@ -658,7 +658,7 @@ export const prePro = new Map([
         {
             id: 56,
             title: "C语言程序是由___构成的",
-            type: 1, 
+            type: 1,
             correct_ans: '函数',
             user_ans: '',
         },
@@ -695,14 +695,14 @@ export const prePro = new Map([
         {
             id: 60,
             title: "break语句只能出现在___语句中",
-            type: 1, 
+            type: 1,
             correct_ans: 'switch、for、while',
             user_ans: '',
         },
         {
             id: 61,
             title: "continue语句的作用是___",
-            type: 1, 
+            type: 1,
             correct_ans: '结束本次循环',
             user_ans: '',
         },
@@ -738,7 +738,7 @@ export const prePro = new Map([
         {
             id: 65,
             title: "do-while的循环体至少执行___次",
-            type: 1, 
+            type: 1,
             correct_ans: '1',
             user_ans: '',
         },
@@ -775,14 +775,14 @@ export const prePro = new Map([
         {
             id: 69,
             title: "访问数组a的元素时，下标x的取值范围为___ ",
-            type: 1, 
+            type: 1,
             correct_ans: '[0,a.length)',
             user_ans: '',
         },
         {
             id: 70,
             title: "数组内存是___的。",
-            type: 1, 
+            type: 1,
             correct_ans: '连续',
             user_ans: '',
         },
@@ -818,17 +818,17 @@ export const prePro = new Map([
         {
             id: 74,
             title: "若有说明：int a[][3]={{1,2,3},{4,5},{6,7}}; 则数组a的第一维的大小为___",
-            type: 1, 
+            type: 1,
             correct_ans: '3',
             user_ans: '',
         },
     ]],
     [
-        134,[
+        134, [
             {
                 id: 76,
                 title: "在执行语句：int a[ ][3]={1,2,3,4,5,6}; 后，a[1][0]的值是",
-                type: 1, 
+                type: 1,
                 correct_ans: '4',
                 user_ans: '',
             },
@@ -929,7 +929,7 @@ export const prePro = new Map([
         {
             id: 86,
             title: "构成C程序的基本单位是___",
-            type: 1, 
+            type: 1,
             correct_ans: '函数',
             user_ans: '',
         },
@@ -1021,6 +1021,287 @@ export const prePro = new Map([
                 },
             ],
             correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    // 第六章续
+    [144, [
+        {
+            id: 96,
+            title: "C语言规定，程序中各函数之间___",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "既允许直接递归调用也允许间接递归调用",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "不允许直接递归调用也不允许间接递归调用",
+                },
+                {
+                    numb: "C",
+                    content: "允许直接递归调用不允许间接递归调用",
+                },
+                {
+                    numb: "D",
+                    content: "不允许直接递归调用允许间接递归调用",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [145, [
+        {
+            id: 98,
+            title: "已有数组定义int a[3][4];和f函数掉用语句f(a);,则在f函数的说明中，对形参数组array的错误定义方式为()",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "f(int array[][6])",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "f(int array[3][])",
+                },
+                {
+                    numb: "C",
+                    content: "f(int array[][4])",
+                },
+                {
+                    numb: "D",
+                    content: "f(int array[2][5])",
+                },
+            ],
+            correct_ans: 'B',
+            user_ans: '',
+        },
+    ]],
+    [146, [
+        {
+            id: 100,
+            title: "用数组名做函数的参数，实际上传递给形参的是（）",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "数组元素的首地址",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "数组的第一个元素的值",
+                },
+                {
+                    numb: "C",
+                    content: "每一个数组元素",
+                },
+                {
+                    numb: "D",
+                    content: "整个数组的个数",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [147, [
+        {
+            id: 102,
+            title: "全局变量和局部变量在内存中有什么区别？",
+            type: 1, 
+            correct_ans: '全局变量保存在内存的全局存储区中，占用静态的存储单元；局部变量保存在栈中，只有在所在函数被调用时才动态地为变量分配存储单元。',
+            user_ans: '',
+        },
+    ]],
+    [148, [
+        {
+            id: 104,
+            title: "若在一个C源程序文件中定义了已给允许其他源文件引用的实型外部变量a，则在另一文件中可使用的引用说明是",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "extern static float a",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "float a",
+                },
+                {
+                    numb: "C",
+                    content: "extern auto float a",
+                },
+                {
+                    numb: "D",
+                    content: "extern float a",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [149, [
+        {
+            id: 106,
+            title: "C语言规定，程序中各函数之间",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "即允许直接递归调用也允许间接递归调用",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "不允许直接递归调用也不允许间接递归调用",
+                },
+                {
+                    numb: "C",
+                    content: "允许直接递归调用不允许间接递归调用",
+                },
+                {
+                    numb: "D",
+                    content: "不允许直接递归调用允许间接递归调用",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    // 第七章
+    [150, [
+        {
+            id: 108,
+            title: "语句int *p;说明了___",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "p是指向一维数组的指针",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "p是指向函数的指针,该函数返回一int型数据",
+                },
+                {
+                    numb: "C",
+                    content: "p是指向int型数据的指针",
+                },
+                {
+                    numb: "D",
+                    content: "p是函数名,该函数返回一指向int型数据的指针",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [151, [
+        {
+            id: 110,
+            title: "若x是整型变量，pb是基类型为整型的指针变量，则正确的赋值表达式是() ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "pb=&x",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "pb=x",
+                },
+                {
+                    numb: "C",
+                    content: "*pb=&x",
+                },
+                {
+                    numb: "D",
+                    content: "*pb=*x",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [152, [
+        {
+            id: 112,
+            title: "下列函数的功能是（），void fun(int *p1,int *p2) { int p; p=*p1;*p1=*p2;*p2=p; } ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "交换*p1和*p2的值",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "语法正确，但无法交换*p1和*p2的值",
+                },
+                {
+                    numb: "C",
+                    content: "交换*p1和*p2的地址",
+                },
+                {
+                    numb: "D",
+                    content: "有语法错误",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [153, [
+        {
+            id: 114,
+            title: "若指针变量p指向整型数组a[10]的首地址, 即p=a ; 则下列数组元素a[i](0<i<10)的表示法中正确的是：",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "p+i",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "&( a+i)",
+                },
+                {
+                    numb: "C",
+                    content: "*(a+i) ",
+                },
+                {
+                    numb: "D",
+                    content: "*(p+i*2)",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [154, [
+        {
+            id: 116,
+            title: "已知：char s[20]= ”programming”, *ps=s; 则不能引用字母o的表达式是（  ）。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "ps[2]",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "s[2]",
+                },
+                {
+                    numb: "C",
+                    content: "ps+2",
+                },
+                {
+                    numb: "D",
+                    content: "ps+=2,  *ps",
+                },
+            ],
+            correct_ans: 'C ',
             user_ans: '',
         },
     ]],
@@ -1889,7 +2170,7 @@ export const testPro = new Map([
         {
             id: 59,
             title: "系统默认的C语言源程序扩展名为.C,需经过___之后,生成.exe文件。",
-            type: 1, 
+            type: 1,
             correct_ans: '编译、连接',
             user_ans: '',
         },
@@ -2035,7 +2316,7 @@ export const testPro = new Map([
         {
             id: 73,
             title: "假定int类型变量占用两个字节，其有定义：int  x[10]={0,2,4};，则数组x在存中所占字节数是___",
-            type: 1, 
+            type: 1,
             correct_ans: '20',
             user_ans: '',
         },
@@ -2044,7 +2325,7 @@ export const testPro = new Map([
         {
             id: 75,
             title: "若有以下数组说明，int a[12]={1,4,7,10,2,5,8,11,3,6,9,12};则i=10;a[a[i]]元素数值是___。",
-            type: 1, 
+            type: 1,
             correct_ans: '9',
             user_ans: '',
         },
@@ -2053,7 +2334,7 @@ export const testPro = new Map([
         {
             id: 77,
             title: "在定义int a[5][6];后，数组a中的第10个元素是________。（设a[0][0]为第一个元素",
-            type: 1, 
+            type: 1,
             correct_ans: 'a[1][3]',
             user_ans: '',
         },
@@ -2171,7 +2452,7 @@ export const testPro = new Map([
         {
             id: 87,
             title: "在C语言中，函数的数据类型是指( ) ",
-            type: 0, 
+            type: 0,
             select: [
                 {
                     numb: "A",
@@ -2226,7 +2507,7 @@ export const testPro = new Map([
         {
             id: 91,
             title: "以下正确的函数定义是（  ）。",
-            type: 0, 
+            type: 0,
             select: [
                 {
                     numb: "A",
@@ -2254,7 +2535,7 @@ export const testPro = new Map([
         {
             id: 93,
             title: "函数在做调用时，实际参数必须与形式参数一致，包括____。",
-            type: 1, 
+            type: 1,
             correct_ans: '数量和数据类型',
             user_ans: '',
         },
@@ -2283,6 +2564,233 @@ export const testPro = new Map([
                 },
             ],
             correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    // 第六章续
+    [144, [
+        {
+            id: 97,
+            title: "函数调用时,C语言支持（）",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "嵌套递归调用",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "支持嵌套不支持递归",
+                },
+                {
+                    numb: "C",
+                    content: "支持递归不支持嵌套",
+                },
+                {
+                    numb: "D",
+                    content: "都不支持",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [145, [
+        {
+            id: 99,
+            title: "若函数调用时的实参为变量时，以下关于函数形参和实参的叙述正确为",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "函数的实参和其对应的形参共占同一存储单元",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "形参只是形实上的存在，不占用具体存储单元",
+                },
+                {
+                    numb: "C",
+                    content: "同名的实参和形参占同一存储单元",
+                },
+                {
+                    numb: "D",
+                    content: "函数的形参和实参分别占用不同的存储单元",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [146, [
+        {
+            id: 101,
+            title: "若使用一维数组名作函数实参，则一下正确的是（）",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "必须在主调函数中说明此数组的大小",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "实参数组类型与形参数组类型可以不匹配",
+                },
+                {
+                    numb: "C",
+                    content: "在被调函数中，不需要考虑形参数组的大小",
+                },
+                {
+                    numb: "D",
+                    content: "实参数组名与形参数组名必须一致",
+                },
+            ],
+            correct_ans: 'A',
+            user_ans: '',
+        },
+    ]],
+    [147, [
+        {
+            id: 103,
+            title: "C程序中各函数之间可以通过多种方式传递数据，下列不能用于实现数据传递的方式是___",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "参数的形实结合",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "函数返回值",
+                },
+                {
+                    numb: "C",
+                    content: "全局变量",
+                },
+                {
+                    numb: "D",
+                    content: "同名的局部变量",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [148, [
+        {
+            id: 105,
+            title: "未指定存储类别的变量，其隐含的存储类别为____ .",
+            type: 1, 
+            correct_ans: 'auto',
+            user_ans: '',
+        },
+    ]],
+    [149, [
+        {
+            id: 107,
+            title: "内部函数跟外部函数的区别：",
+            type: 1, 
+            correct_ans: '一个文件中定义的函数能否被其它文件调用。能被调用的函数在前面加extern（一般省略），而不能被调用的加static（不能省略），通常函数本质上是全局的，也就是外部的可调用的。',
+            user_ans: '',
+        },
+    ]],
+    // 第七章
+    [150, [
+        {
+            id: 109,
+            title: "变量的指针，其含义是指该变量的___",
+            type: 1, 
+            correct_ans: '地址',
+            user_ans: '',
+        },
+    ]],
+    [151, [
+        {
+            id: 111,
+            title: "已知：int a, *p=&a; 则下列函数调用中错误的是（    ）。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "scanf(“%d”,&a);",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "scanf(“%d”,p);",
+                },
+                {
+                    numb: "C",
+                    content: "printf(“%d”,a);",
+                },
+                {
+                    numb: "D",
+                    content: "printf(“%d”,p);",
+                },
+            ],
+            correct_ans: 'D',
+            user_ans: '',
+        },
+    ]],
+    [152, [
+        {
+            id: 113,
+            title: "指针作为函数参数时，是将一个___传送到另一个函数中。",
+            type: 1, 
+            correct_ans: '变量的地址',
+            user_ans: '',
+        },
+    ]],
+    [153, [
+        {
+            id: 115,
+            title: "若有说明语句“int a[5],*p=a;”,则对数组元素的正确引用是(  )。",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "a[p] ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "p[a]",
+                },
+                {
+                    numb: "C",
+                    content: "*(p+2)",
+                },
+                {
+                    numb: "D",
+                    content: "p+2",
+                },
+            ],
+            correct_ans: 'C',
+            user_ans: '',
+        },
+    ]],
+    [154, [
+        {
+            id: 117,
+            title: "下列字符串赋值式不正确的是( ) ",
+            type: 0, select: [
+                {
+                    numb: "A",
+                    content: "char str[20]; ",
+                },
+                {
+                    numb: "B",
+                    content:
+                        "char *str ;str=”I am a boy!”; str=”I am a boy!”; ",
+                },
+                {
+                    numb: "C",
+                    content: "char *str=”I am a boy!”; ",
+                },
+                {
+                    numb: "D",
+                    content: "char str[20]=” I am a boy!”;",
+                },
+            ],
+            correct_ans: 'A',
             user_ans: '',
         },
     ]],

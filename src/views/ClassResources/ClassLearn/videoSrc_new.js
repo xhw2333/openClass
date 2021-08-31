@@ -26,6 +26,15 @@ export let videoData = [
         ifFinished: false, //是否看完
       },
       {
+        title: "程序设计基础平台使用教程",
+        video: "http://qgailab.com/cloud/course/resources/video/open_use.mp4",
+        videoId: -1,
+        total: 149, //总时长
+        rate: 0, //观看进度
+        content: '本节介绍的是本平台的使用教程，为了让同学们更好的使用这个平台来进行学习C语言，特设置了此小节，让同学们更加熟悉这个平台的操作。',
+        ifFinished: false, //是否看完
+      },
+      {
         title: "程序设计掌上移动自主学习平台（AnyWork网页版）使用教程",
         video: "http://qgailab.com/cloud/course/resources/video/anywork学生端.mp4",
         videoId: -1,
@@ -484,6 +493,116 @@ export let videoData = [
         rate: 0, //观看进度
         total: 534, //总时长
         content: 'C语言中函数的定义都是相互平行、相互独立的，在函数定义时，函数体内不能包含另一个函数的定义，即函数不能嵌套定义，但可以嵌套调用。嵌套调用就是某个函数调用另外一个函数（即函数嵌套允许在一个函数中调用另外一个函数）',
+        ifFinished: false,
+      },
+      {
+        title: "函数的递归调用",
+        video: "http://qgailab.com/cloud/course/resources/video/6.6_1.mp4",
+        videoId: 144,
+        rate: 0, //观看进度
+        total: 436, //总时长
+        content: '函数调用是通过栈实现的。在调用函数时，系统会将被调函数所需的程序空间安排在一个栈中。递归也是一种函数调用，只不过是函数自己调用自己，是一种特殊的函数调用，调用自己同调用别人是一模一样的。',
+        ifFinished: false,
+      },
+      {
+        title: "数组元素作为函数实参",
+        video: "http://qgailab.com/cloud/course/resources/video/6.7_1.mp4",
+        videoId: 145,
+        rate: 0, //观看进度
+        total: 308, //总时长
+        content: '数组元素作函数参数,数组元素就是下标变量，它与普通变量并无区别。因此它作为函数实参使用与普通变量是完全相同的，在发生函数调用时，把作为实参的数组元素的值传递给形参，实现单向的值传递。',
+        ifFinished: false,
+      },
+      {
+        title: "数组名作为函数参数",
+        video: "http://qgailab.com/cloud/course/resources/video/6.8_1.mp4",
+        videoId: 146,
+        rate: 0, //观看进度
+        total: 571, //总时长
+        content: '数组名作函数参数,数组名就是数组的首地址。因此在数组名作为函数参数时所进行的传递只是地址的传递，也就是说把实参数组的首地址赋予形参数组名。形参数组名取得该首地址之后，也等于有了实际的数组，即实参与形参有一段共用的内存空间。',
+        ifFinished: false,
+      },
+      {
+        title: "局部变量和全局变量",
+        video: "http://qgailab.com/cloud/course/resources/video/6.9_1.mp4",
+        videoId: 147,
+        rate: 0, //观看进度
+        total: 832, //总时长
+        content: '变量按存储区域分：全局变量、静态全局变量和静态局部变量都存放在内存的静态存储区域，局部变量存放在内存的栈区。',
+        ifFinished: false,
+      },
+      {
+        title: "变量的存储方式和生存期",
+        video: "http://qgailab.com/cloud/course/resources/video/6.10_1.mp4",
+        videoId: 148,
+        rate: 0, //观看进度
+        total: 848, //总时长
+        content: '从变量值存在的作时间（即生存期）角度来分，可以分为静态存储方式和动态存储方式。 静态存储方式：是指在程序运行期间分配固定的存储空间的方式。 动态存储方式：是在程序运行期间根据需要进行动态的分配存储空间的方式。 ',
+        ifFinished: false,
+      },
+      {
+        title: "外部函数和内部函数",
+        video: "http://qgailab.com/cloud/course/resources/video/6.11_1.mp4",
+        videoId: 149,
+        rate: 0, //观看进度
+        total: 105, //总时长
+        content: '内部函数（静态函数）:只能被本文件中其它函数调用。定义内部函数时，在函数名核函数类型的前面加上static。外部函数：可被其他文件调用，在函数首部最左端加上关键字extern，则此函数是外部函数。本章主要介绍两种函数的区别',
+        ifFinished: false,
+      },
+    ],
+  },
+  {
+    title: "七、指针",
+    show: false, //是否展示详细内容
+    rate: 0, //进度
+    work:
+      // "http://qgailab.com/cloud/course/static/pdf/6.1_1.pptx",
+      '',
+    file: 'http://qgailab.com/cloud/course/static/pdf/7.1_1.pdf',
+    detail: [
+      {
+        title: "定义指针变量",
+        video: "http://qgailab.com/cloud/course/resources/video/7.1_1.mp4",
+        videoId: 150,
+        rate: 0, //观看进度
+        total: 300, //总时长
+        content: "若有一个变量专门用来存放另一个变量的地址，那么就称它为“指针变量”。也就是说，指针变量里面存放的是指针，即地址。C 语言规定所有变量在使用前必须先定义，指定其类型，并按此分配内存单元。指针变量不同于整型变量和其他类型的变量，它是专门用来存放地址的，所以必须将它定义为“指针类型”。",
+        ifFinished: false,
+      },
+      {
+        title: "引用指针变量",
+        video: "http://qgailab.com/cloud/course/resources/video/7.2_1.mp4",
+        videoId: 151,
+        rate: 0, //观看进度
+        total: 341, //总时长
+        content: "在指针运算中，经常需要用到以下运算符：*（指针运算符、间接访问运算符），可以取指针变量指向变量的内容。&（取地址运算符）；取变量的地址。",
+        ifFinished: false,
+      },
+      {
+        title: "指针变量作为函数参数",
+        video: "http://qgailab.com/cloud/course/resources/video/7.3_1.mp4",
+        videoId: 152,
+        rate: 0, //观看进度
+        total: 381, //总时长
+        content: "在C语言中，函数的参数不仅可以是整数、小数、字符等具体的数据，还可以是指向它们的指针。用指针变量作函数参数可以将函数外部的地址传递到函数内部，使得在函数内部可以操作函数外部的数据，并且这些数据不会随着函数的结束而被销毁。",
+        ifFinished: false,
+      },
+      {
+        title: "通过指针引用数组",
+        video: "http://qgailab.com/cloud/course/resources/video/7.4_1.mp4",
+        videoId: 153,
+        rate: 0, //观看进度
+        total: 708, //总时长
+        content: "数组（Array）是一系列具有相同类型的数据的集合，每一份数据叫做一个数组元素（Element）。数组中的所有元素在内存中是连续排列的，整个数组占用的是一块内存。定义数组时，要给出数组名和数组长度，数组名可以认为是一个指针，它指向数组的第 0 个元素。在C语言中，我们将第 0 个元素的地址称为数组的首地址。",
+        ifFinished: false,
+      },
+      {
+        title: "通过指针引用字符串",
+        video: "http://qgailab.com/cloud/course/resources/video/7.5_1.mp4",
+        videoId: 154,
+        rate: 0, //观看进度
+        total: 170, //总时长
+        content: "字符数组归根结底还是一个数组，上节讲到的关于指针和数组的规则同样也适用于字符数组。还可以直接使用一个指针指向字符串",
         ifFinished: false,
       },
     ],
